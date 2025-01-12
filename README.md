@@ -317,7 +317,7 @@ Stay connected with the latest updates and community by joining our official Wha
 
 ### Thank You Dear
 
-> DEVELOPER OF SUBZERO-MD 
+> DEVELOPER OF GMAX-MD 
 - [Mr Frank ](https://github.com/Gmaxtech2024)
 - Creater and Owner Of GMAX-MD
 
