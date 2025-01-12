@@ -35,7 +35,7 @@ Dont forget to fork 🍴 & star 🌟 repo😇
 ***
 
 <p align="center">
-  <a href="https://github.com/Gmaxtech2024"><img title="Developer" src="https://img.shields.io/badge/Author-Mr%20Frank-397604.svg?style=for-the-badge&logo=github" /></a>
+  <a href="https://github.com/Gmaxtech2024"><img title="Developer" src="https://img.shields.io/badge/Author-Sir%20Gmax-397604.svg?style=for-the-badge&logo=github" /></a>
 </p>
 
 <div align="center">
@@ -43,7 +43,7 @@ Dont forget to fork 🍴 & star 🌟 repo😇
 [![WhatsApp Channel](https://img.shields.io/badge/Join-WhatsApp%20Channel-FF00F8?style=for-the-badge&logo=whatsapp)](https://whatsapp.com/channel/0029VagQEmB002T7MWo3Sj1D)
 </div>
 
- <p align="center"><img src="https://profile-counter.glitch.me/{GMAX-MD}/count.svg" alt="mrfrank-ofc :: Visitor's Count" old_src="https://profile-counter.glitch.me/{Sir Gmax}/count.svg" /></p>
+ <p align="center"><img src="https://profile-counter.glitch.me/{GMAX-MD}/count.svg" alt="Gmaxtech2024 :: Visitor's Count" old_src="https://profile-counter.glitch.me/{Sir Gmax}/count.svg" /></p>
 
 
 <p align="center">
@@ -192,7 +192,7 @@ That's all bot connected
 
 <h3 align="center"> HOW TO DEPLOY ON HUGGING FACE</h3>
 <h6 align-"center">
-*❄️ Deploy SubZero On Hugging Face For Free !*
+*❄️ Deploy Gmax md On Hugging Face For Free !*
 
 `Specs :`
 - v2 CPU
@@ -318,11 +318,11 @@ Stay connected with the latest updates and community by joining our official Wha
 ### Thank You Dear
 
 > DEVELOPER OF GMAX-MD 
-- [Mr Frank ](https://github.com/Gmaxtech2024)
+- [Sir Gmax ](https://github.com/Gmaxtech2024)
 - Creater and Owner Of GMAX-MD
 
 > GMAX-MD Helper
-- [Frank](https://github.com/efkidgamerdev)
+- [Cyber](https://github.com/efkidgamerdev)
 - For helping in bot plugin files.
 ---
 
