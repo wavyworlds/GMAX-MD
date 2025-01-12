@@ -3,11 +3,11 @@
 </p>
 
   <p align="center">
-<a href="https://github.com/mrfrank-ofc/followers"><img title="Followers" src="https://img.shields.io/github/followers/mrfrank-ofc?color=blue&style=flat-square"></a>
-<a href="https://github.com/mrfrank-ofc/SUBZERO-MD/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/mrfrank-ofc/SUBZERO-MD?color=blue&style=flat-square"></a>
-<a href="https://github.com/mrfrank-ofc/SUBZERO-MD/network/members"><img title="Forks" src="https://img.shields.io/github/forks/mrfrank-ofc/SUBZERO-MD?color=blue&style=flat-square"></a>
-<a href="https://github.com/mrfrank-ofc/SUBZERO-MD/"><img title="Size" src="https://img.shields.io/github/repo-size/mrfrank-ofc/SUBZERO-MD?style=flat-square&color=green"></a>
-<a href="https://github.com/mrfrank-ofc/SUBZERO-MD/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>&nbsp;&nbsp;
+<a href="https://github.com/Gmaxtech2024/followers"><img title="Followers" src="https://img.shields.io/github/followers/Gmaxtech2024?color=blue&style=flat-square"></a>
+<a href="https://github.com/Gmaxtech2024/GMAX-MD/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Gmaxtech2024/GMAX-MD?color=blue&style=flat-square"></a>
+<a href="https://github.com/Gmaxtech2024/GMAX-MD/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Gmaxtech2024/GMAX-MD?color=blue&style=flat-square"></a>
+<a href="https://github.com/Gmaxtech2024/GMAX-MD/"><img title="Size" src="https://img.shields.io/github/repo-size/Gmaxtech2024/GMAX-MD?style=flat-square&color=green"></a>
+<a href="https://github.com/Gmaxtech2024/GMAX-MD/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>&nbsp;&nbsp;
 </p>
 <p align='center'>
 </p>
@@ -21,8 +21,8 @@ Dont forget to fork 🍴 & star 🌟 repo😇
 ---
 
 <p align="center">
-  <a href="https://github.com/mrfrank-ofc">
-    <img src="http://readme-typing-svg.herokuapp.com?color=blue&center=true&vCenter=true&multiline=false&lines=SUBZERO-MD-+MultiDevice;Developed+by+Mr+Frank;Give+star+and+fork+this+Repo+bro+🌟" alt="mrfrankReadme">
+  <a href="https://github.com/Gmaxtech2024">
+    <img src="http://readme-typing-svg.herokuapp.com?color=blue&center=true&vCenter=true&multiline=false&lines=GMAX-MD+MultiDevice;Developed+by+Sir+Gmax;Give+star+and+fork+this+Repo+bro+🌟" alt="sirgmaxReadme">
   </a>
 </p>
 
@@ -35,7 +35,7 @@ Dont forget to fork 🍴 & star 🌟 repo😇
 ***
 
 <p align="center">
-  <a href="https://github.com/mrfrank-ofc"><img title="Developer" src="https://img.shields.io/badge/Author-Mr%20Frank-397604.svg?style=for-the-badge&logo=github" /></a>
+  <a href="https://github.com/Gmaxtech2024"><img title="Developer" src="https://img.shields.io/badge/Author-Mr%20Frank-397604.svg?style=for-the-badge&logo=github" /></a>
 </p>
 
 <div align="center">
@@ -43,17 +43,17 @@ Dont forget to fork 🍴 & star 🌟 repo😇
 [![WhatsApp Channel](https://img.shields.io/badge/Join-WhatsApp%20Channel-FF00F8?style=for-the-badge&logo=whatsapp)](https://whatsapp.com/channel/0029VagQEmB002T7MWo3Sj1D)
 </div>
 
- <p align="center"><img src="https://profile-counter.glitch.me/{SUBZERO-MD}/count.svg" alt="mrfrank-ofc :: Visitor's Count" old_src="https://profile-counter.glitch.me/{mrfrank-ofc}/count.svg" /></p>
+ <p align="center"><img src="https://profile-counter.glitch.me/{GMAX-MD}/count.svg" alt="mrfrank-ofc :: Visitor's Count" old_src="https://profile-counter.glitch.me/{Sir Gmax}/count.svg" /></p>
 
 
 <p align="center">
-<a href="https://github.com/mrfrank-ofc/SUBZERO-MD"><img title="PUBLIC-BOT" src="https://img.shields.io/static/v1?label=Language&message=English&style=flat-square&color=darkpink"></a> &nbsp;
-  <img src="https://komarev.com/ghpvc/?username=SUBZERO-MD&label=VIEWS&style=flat-square&color=blue" />
+<a href="https://github.com/Gmaxtech2024/GMAX-MD"><img title="PUBLIC-BOT" src="https://img.shields.io/static/v1?label=Language&message=English&style=flat-square&color=darkpink"></a> &nbsp;
+  <img src="https://komarev.com/ghpvc/?username=GMAX-MD&label=VIEWS&style=flat-square&color=blue" />
 </p>
 </p> 
 
 <p align="center">
-  <a href="https://github.com/mrfrank-ofc/SUBZERO-MD"><img title="Release" src="https://img.shields.io/badge/Release-beta%20v2.0-darkcyan.svg?style=for-the-badge&logo=appveyor" /></a>
+  <a href="https://github.com/Gmaxtech2024/GMAX-MD"><img title="Release" src="https://img.shields.io/badge/Release-beta%20v2.0-darkcyan.svg?style=for-the-badge&logo=appveyor" /></a>
 </p>
 
 
@@ -63,7 +63,7 @@ Dont forget to fork 🍴 & star 🌟 repo😇
 
 Start by forking this repository to your own GitHub account. Click the button below to fork:
 
-  <a href="https://github.com/mrfrank-ofc/SUBZERO-MD/fork"><img title="SUBZERO-MD" src="https://img.shields.io/badge/FORK-SUBZERO-MDh?color=blue&style=for-the-badge&logo=stackshare"></a>
+  <a href="https://github.com/Gmaxtech2024/GMAX-MD/fork"><img title="GMAX-MD" src="https://img.shields.io/badge/FORK-GMAX-MDh?color=blue&style=for-the-badge&logo=stackshare"></a>
   
 ### 2. Get Session ID 
 
@@ -92,7 +92,7 @@ You will need a session ID to run the SUBZERO-MD. Click the button below to obta
 
 ---
 
-<h2 align="center">SubZero Deployment Options</h2>
+<h2 align="center">Gmax Deployment Options</h2>
 
 ---
 
@@ -101,7 +101,7 @@ You will need a session ID to run the SUBZERO-MD. Click the button below to obta
 
 
 <p align="center">
-<a href='https://dashboard.heroku.com/new?template=https://github.com/mrfrank-ofc/SUBZERO-MD/tree/main' target="_blank"><img alt='Heroku' src='https://img.shields.io/badge/-heroku ‎ deploy-FF004D?style=for-the-badge&logo=heroku&logoColor=white'/< width=150 height=28/p></a>
+<a href='https://dashboard.heroku.com/new?template=https://github.com/Gmaxtech2024/GMAX-MD/tree/main' target="_blank"><img alt='Heroku' src='https://img.shields.io/badge/-heroku ‎ deploy-FF004D?style=for-the-badge&logo=heroku&logoColor=white'/< width=150 height=28/p></a>
 
 ----------
 
@@ -130,7 +130,7 @@ You will see a dashboard of bots listed
 
 
 Click next , next
-Until you see SUBZERO MD
+Until you see GMAX MD
 Then click on it
 
 You will be asked to fill in some stuffs like your session Id , and other stuffs on how you want your bot to be ( bot settings ) , it's not hard I added examples
@@ -138,7 +138,7 @@ You will be asked to fill in some stuffs like your session Id , and other stuffs
 
 Get session I'd here:
 
-https://tinyurl.com/subzero-md-session-id
+https://tinyurl.com/gmax-md-session-id
 
 After you're done filling it
 Click deploy button 
@@ -160,7 +160,7 @@ That's all bot connected
 
 
 <p align="center">
-<a href='https://app.koyeb.com/services/deploy?type=git&repository=mrfrank-ofc/SUBZERO-MD&ports=3000&env[PREFIX]=.&env[SESSION_ID]=&env[ALWAYS_ONLINE]=false&env[MODE]=public&env[AUTO_STATUS_MSG]=Seen%20status%20by%20SUBZERO-MD&env[AUTO_STATUS_REPLY]=false&env[AUTO_STATUS_SEEN]=true&env[AUTO_TYPING]=false&env[ANTI_LINK]=true&env[AUTO_REACT]=false&env[READ_MESSAGE]=false' target="_blank"><img alt='Heroku' src='https://img.shields.io/badge/-koyeb ‎ deploy-FF009D?style=for-the-badge&logo=koyeb&logoColor=white'/< width=150 height=28/p></a>
+<a href='https://app.koyeb.com/services/deploy?type=git&repository=Gmaxtech2024/GMAX-MD&ports=3000&env[PREFIX]=.&env[SESSION_ID]=&env[ALWAYS_ONLINE]=false&env[MODE]=public&env[AUTO_STATUS_MSG]=Seen%20status%20by%20SUBZERO-MD&env[AUTO_STATUS_REPLY]=false&env[AUTO_STATUS_SEEN]=true&env[AUTO_TYPING]=false&env[ANTI_LINK]=true&env[AUTO_REACT]=false&env[READ_MESSAGE]=false' target="_blank"><img alt='Heroku' src='https://img.shields.io/badge/-koyeb ‎ deploy-FF009D?style=for-the-badge&logo=koyeb&logoColor=white'/< width=150 height=28/p></a>
 
 -----
 <h4 align="center">4. Railway</h4>
@@ -204,7 +204,7 @@ That's all bot connected
 1. Go to hugginface.co/join and create an account and verify your email too.
 
 `Step 2`
-1. Go to https://huggingface.co/spaces/mrfrank-ofc/SUBZERO-MD
+1. Go to https://huggingface.co/spaces/Gmaxtech2024/GMAX-MD
 
 2. Tap on *three dots* _(as shown in image)_
 
@@ -219,7 +219,7 @@ That's all bot connected
 
 > CREDITS PIKABOTZ🎐
 
-*ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ꜰʀᴀɴᴋ ᴏꜰᴄ*</h6>
+*POWERED By Sir Gmax*</h6>
 
 </details>
 
@@ -318,10 +318,10 @@ Stay connected with the latest updates and community by joining our official Wha
 ### Thank You Dear
 
 > DEVELOPER OF SUBZERO-MD 
-- [Mr Frank ](https://github.com/mrfrank-ofc)
-- Creater and Owner Of SUBZERO-MD
+- [Mr Frank ](https://github.com/Gmaxtech2024)
+- Creater and Owner Of GMAX-MD
 
-> SUBZERO-MD Helper
+> GMAX-MD Helper
 - [Frank](https://github.com/efkidgamerdev)
 - For helping in bot plugin files.
 ---
