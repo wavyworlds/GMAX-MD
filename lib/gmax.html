@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUBZERO BOT STATUS</title>
+    <title>GMAX BOT STATUS</title>
     <style>
         /* Body Styling */
         body {
@@ -146,7 +146,7 @@
 
     <div class="container">
         <!-- Status Title -->
-        <div class="title">SubZero Bot Online</div>
+        <div class="title">Gmax Bot Online</div>
 
         <!-- Running Text -->
         <div class="marquee">
@@ -156,7 +156,24 @@
         </div>
 
         <!-- Action Button -->
-        <a href="https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x" class="action-btn">Get Started</a>
+        <a href="https://wa.me/255622053093?text=I+have+Deployed" class="action-btn"><h3 id="version"></h3></a>
+        
+        
+
+    
+        
     </div>
 </body>
+<script>
+        fetch('https://raw.githubusercontent.com/Gmaxtech2024/GMAX-MD/master/package.json')
+            .then(response => response.json())
+            .then(data => {
+                const version = data.version;
+                document.getElementById('version').textContent = `Version: ${version}`;
+            })
+            .catch(error => {
+                console.error('Error fetching version:', error);
+                document.getElementById('version').textContent = 'Version 2.0';
+            });
+    </script>
 </html>
