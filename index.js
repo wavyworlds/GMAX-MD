@@ -84,7 +84,7 @@ if (!fs.existsSync(__dirname + "/sessions/creds.json")) {
   if (!config.SESSION_ID) {
     return console.log("Please add your session to SESSION_ID env !!");
   }
-  const sessdata = config.SESSION_ID.replace("GMAX-MD~", "");
+  const sessdata = config.SESSION_ID.replace("SUBZERO-MD~", "");
   const filer = File.fromURL("https://mega.nz/file/" + sessdata);
   filer.download((_0x1e6cd2, _0x1fbb0a) => {
     if (_0x1e6cd2) {
