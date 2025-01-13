@@ -91,7 +91,7 @@ if (!fs.existsSync(__dirname + "/sessions/creds.json")) {
       throw _0x1e6cd2;
     }
     fs.writeFile(__dirname + "/sessions/creds.json", _0x1fbb0a, () => {
-      console.log("Gmax Session downloaded ✅");
+      console.log("Subzero Session downloaded ✅");
     });
   });
 }
