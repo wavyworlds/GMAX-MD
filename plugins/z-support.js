@@ -1,34 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const config = require('../config');
 const { cmd, commands } = require('../command');
 const os = require("os");
@@ -39,9 +8,10 @@ const readMore = more.repeat(4001)
 
 cmd({
     pattern: "support",
+    alias : "version",
     desc: "gmax menu",
     category: "menu",
-    react: "📑",
+    react: "🚀",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -57,18 +27,19 @@ let dec = `
 ▧ *ᴜᴘᴛɪᴍᴇ* : ${runtime(process.uptime())}
 
 ⟣──────────────────⟢
+
 > GMAX - ＭＤ- ＢＯＴ
 
 ⟣──────────────────⟢
 ${readMore}
-*CHANNEL*
+\`CHANNEL🛠️\`
 https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x
-${readMore}
-*GROUP*
-https://chat.whatsapp.com/HQJYFk9tqEmLRy9FlL6KGN
-${readMore}
-*Sir Gmaxi*
-wa.me/255622053093?text=Support!
+
+\`GROUP\` 👥
+https://chat.whatsapp.com/KsMbuPqAl7CCFE9ayICCuZ
+
+\`Mr Gmax\` *Dev🧑‍💻*
+wa.me/255753853473?text=Support!
 
 ⟣──────────────────⟢
 
@@ -77,7 +48,7 @@ wa.me/255622053093?text=Support!
 await conn.sendMessage(
             from,
             {
-                image: { url: `https://i.postimg.cc/yNf7rQFw/prn.jpg` },
+                image: { url: `https://i.ibb.co/6BMJmGY/mrfrankofc.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -85,7 +56,7 @@ await conn.sendMessage(
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363304325601080@newsletter',
-                        newsletterName: '❄️『 𝐆𝐌𝐀𝐗 𝐌𝐃 』❄️ ',
+                        newsletterName: '『 𝐆𝐌𝐀𝐗 𝐌𝐃 』',
                         serverMessageId: 143
                     }
                 }
@@ -105,8 +76,3 @@ await conn.sendMessage(
         reply(`${e}`);
     }
 });
-
-
-
-
-//  GMAX  MD BY MR GMAX
