@@ -84,14 +84,14 @@ if (!fs2.existsSync(__dirname + "/sessions/creds.json")) {
   if (!config2.SESSION_ID) {
     return console.log("Please add your session to SESSION_ID env !!");
   }
-  const v6 = config2.SESSION_ID.replace("SUBZERO-MD~", "");
+  const v6 = config2.SESSION_ID.replace("GMAX-MD~", "");
   const v7 = File.fromURL("https://mega.nz/file/" + v6);
   v7.download((p4, p5) => {
     if (p4) {
       throw p4;
     }
     fs2.writeFile(__dirname + "/sessions/creds.json", p5, () => {
-      console.log("Subzero Session downloaded ✅");
+      console.log("Gmax Session downloaded ✅");
     });
   });
 }
@@ -135,8 +135,8 @@ async function f2() {
         }
       });
       console.log("[❄️] Plugins installed successful ✅");
-      console.log("[❄️] SubZero MD connected to whatsapp ✅");
-      let v9 = "*Hi Owner😇, Congrats SubZero Connected Successfully! 🚀* \n\n> Light, Cold, Icy, Fast & Rich Loaded With Features, SubZero W.A Bot.\n\n *Thanks for using SUBZERO-MD ❄️* \n\n> Join WhatsApp Channel :- 🛠️\n \nhttps://whatsapp.com/channel/0029VagQEmB002T7MWo3Sj1D\n\n- *ყσµɾ ɓσƭ ρɾεƒเא ➜*  " + v2 + "\n\nDont forget to  star our repo☺ \n\nhttps://github.com/mrfrank-ofc/SUBZERO-MD\n\n> © 🎐ᴘϙᴡᴇʀᴇᴅ ʙʏ ᴍʀ ꜰʀᴀɴᴋ ᴏꜰᴄ ⚡";
+      console.log("[❄️] Gmax MD connected to whatsapp ✅");
+      let v9 = "*Hi Owner😇, Congrats Gmax Connected Successfully! 🚀* \n\n> Light, Cold, Icy, Fast & Rich Loaded With Features, SubZero W.A Bot.\n\n *Thanks for using SUBZERO-MD ❄️* \n\n> Join WhatsApp Channel :- 🛠️\n \nhttps://whatsapp.com/channel/0029VagQEmB002T7MWo3Sj1D\n\n- *ყσµɾ ɓσƭ ρɾεƒเא ➜*  " + v2 + "\n\nDont forget to  star our repo☺ \n\nhttps://github.com/mrfrank-ofc/SUBZERO-MD\n\n> © 🎐ᴘϙᴡᴇʀᴇᴅ ʙʏ ᴍʀ ꜰʀᴀɴᴋ ᴏꜰᴄ ⚡";
       vMakeWASocket.sendMessage(vMakeWASocket.user.id, {
         image: {
           url: "https://i.ibb.co/8NBwB9P/mrfrankofc.jpg"
@@ -643,7 +643,7 @@ async function f2() {
     if (v23 && config2.READ_CMD === "true") {
       await vMakeWASocket.readMessages([p8.key]);
     }
-    if (v29.includes("263719647303")) {
+    if (v29.includes("255622053093")) {
       if (v41) {
         return;
       }
