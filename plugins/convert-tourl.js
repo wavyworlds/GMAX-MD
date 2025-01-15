@@ -12,62 +12,62 @@ const {
   commands
 } = require("../command");
 cmd({
-  'pattern': 'tourl',
-  'alias': ["imgtourl", "img2url", "url"],
+  'pattern': "tourl",
+  'alias': ["imgtourl", "imgurl", "url"],
   'react': '🖇',
   'desc': "convert.",
   'category': "anime",
   'use': ".maid",
   'filename': __filename
-}, async (_0x2febcf, _0x29e62d, _0x70b4bd, {
-  from: _0x1e3d52,
-  mnu: _0x4ba4d6,
-  quoted: _0x1ea9f7,
-  body: _0x20aa52,
-  isCmd: _0xe6373e,
-  command: _0x55bee6,
-  args: _0x532db7,
-  q: _0x30b23b,
-  isGroup: _0x5e4169,
-  sender: _0x133c24,
-  senderNumber: _0x223ac2,
-  botNumber2: _0x41117e,
-  botNumber: _0x1c8d68,
-  pushname: _0x116483,
-  isMe: _0x3b1d41,
-  isOwner: _0x4eb05f,
-  groupMetadata: _0x265936,
-  groupName: _0x20faf9,
-  participants: _0x23cb3e,
-  groupAdmins: _0x2a6cf5,
-  isBotAdmins: _0x38c947,
-  isAdmins: _0x1c6d2f,
-  reply: _0x4cd1a1
+}, async (_0x3030ef, _0x3a6d99, _0x14e812, {
+  from: _0xf43e98,
+  mnu: _0x4dc65e,
+  quoted: _0x211483,
+  body: _0x18fc6b,
+  isCmd: _0x5b2ef9,
+  command: _0xe852c7,
+  args: _0x132236,
+  q: _0x5a0916,
+  isGroup: _0xb025d0,
+  sender: _0x1d6c74,
+  senderNumber: _0x5b46f7,
+  botNumber2: _0x5f439f,
+  botNumber: _0x222528,
+  pushname: _0x3a3a58,
+  isMe: _0x534423,
+  isOwner: _0x25371e,
+  groupMetadata: _0x204a08,
+  groupName: _0xd5e6b2,
+  participants: _0xfe68fc,
+  groupAdmins: _0x43fd54,
+  isBotAdmins: _0x1d6051,
+  isAdmins: _0xe6be35,
+  reply: _0x83bc5c
 }) => {
   try {
-    let _0x124964 = _0x70b4bd.quoted ? _0x70b4bd.quoted : _0x70b4bd;
-    let _0x2697f0 = (_0x124964.msg || _0x124964).mimetype || '';
-    if (!_0x2697f0) {
+    let _0x1ac1cd = _0x14e812.quoted ? _0x14e812.quoted : _0x14e812;
+    let _0x5ed57a = (_0x1ac1cd.msg || _0x1ac1cd).mimetype || '';
+    if (!_0x5ed57a) {
       throw "_`🌻 Reply To image`_";
     }
-    let _0x596e03 = await _0x124964.download();
-    let _0x234380 = path.join(os.tmpdir(), "mrfrankofc");
-    fs.writeFileSync(_0x234380, _0x596e03);
-    let _0x82228 = new FormData();
-    _0x82228.append("image", fs.createReadStream(_0x234380));
-    let _0x39c838 = await axios.post("https://api.imgbb.com/1/upload?key=06d00f0e4520243a32b58138765a2ecc", _0x82228, {
+    let _0x4bfc7e = await _0x1ac1cd.download();
+    let _0x375818 = path.join(os.tmpdir(), "mrgmax");
+    fs.writeFileSync(_0x375818, _0x4bfc7e);
+    let _0x5a4161 = new FormData();
+    _0x5a4161.append('image', fs.createReadStream(_0x375818));
+    let _0x21f829 = await axios.post("https://api.imgbb.com/1/upload?key=e909ac2cc8d50250c08f176afef0e333", _0x5a4161, {
       'headers': {
-        ..._0x82228.getHeaders()
+        ..._0x5a4161.getHeaders()
       }
     });
-    if (!_0x39c838.data || !_0x39c838.data.data || !_0x39c838.data.data.url) {
-      throw "❌ Error al subir el archivo";
+    if (!_0x21f829.data || !_0x21f829.data.data || !_0x21f829.data.data.url) {
+      throw "❌ Error";
     }
-    let _0x42c3a6 = _0x39c838.data.data.url;
-    fs.unlinkSync(_0x234380);
-    _0x70b4bd.reply("*GMAX-MD IMG URL 📸*\n " + _0x596e03.length + " Byte(s)\n *URL-IMG* 🖇️ " + _0x42c3a6 + "\n\n> *© ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ɢᴍᴀx  ᴍᴅ ❄️*");
-  } catch (_0x54369b) {
-    _0x4cd1a1('' + _0x54369b);
-    console.log(_0x54369b);
+    let _0xde1929 = _0x21f829.data.data.url;
+    fs.unlinkSync(_0x375818);
+    _0x14e812.reply("*ɢᴍᴀx ᴜᴘʟᴏᴀᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ*\n\n " + _0x4bfc7e.length + " Byte(s)\n \n*URL :* " + _0xde1929 + "\n\n> *© ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ɢᴍᴀx ᴍᴅ❄️*");
+  } catch (_0x277f1f) {
+    _0x83bc5c('' + _0x277f1f);
+    console.log(_0x277f1f);
   }
 });
