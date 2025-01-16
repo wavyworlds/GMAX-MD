@@ -133,7 +133,7 @@ cmd({
     alias: "menu2",
     desc: "menu the bot",
     category: "menu2",
-    react: "🛠️",
+    react: "⚡",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -369,7 +369,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363304325601080@newsletter',
+                        newsletterJid: '120363220399229536@newsletter',
                         newsletterName: '𝔊𝔪𝔞𝔵 м∂ ω.α ϐοτ',
                         serverMessageId: 143
                     }
