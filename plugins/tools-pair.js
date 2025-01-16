@@ -11,7 +11,7 @@ cmd({
   'react': '🔄',
   'desc': "pair",
   'category': "download",
-  'use': ".pair +25562205XXX",
+  'use': ".pair +2556220530XX",
   'filename': __filename
 }, async (_0x53ef81, _0x3fcf12, _0x1cac84, {
   from: _0x2eaa93,
@@ -26,10 +26,10 @@ cmd({
       return await _0x20e232("❌ This command is not allowed in group chats. Please use it in my inbox.");
     }
     if (!_0x283a2f) {
-      return await _0x20e232("*Example - :* .pair +25562205XXX");
+      return await _0x20e232("*Example - :* .pair +2556220530XX");
     }
     await _0x20e232("*Getting pairing code...*");
-    const _0x4504a8 = await fetchJson("https://gmax-md-ultraa.onrender.com/code?number=" + _0x283a2f);
+    const _0x4504a8 = await fetchJson("https://gmaxmd-pair-one.onrender.com/code?number=" + _0x283a2f);
     const _0x4bc4f7 = _0x4504a8.code;
     await _0x1cac84.reply('' + _0x4bc4f7);
     await _0x1cac84.reply("> *Use the above pairing code to get your session id for GMAX-MD.*");
@@ -44,7 +44,7 @@ cmd({
   'react': '🔄',
   'desc': "pair",
   'category': 'download',
-  'use': ".pair +25562205XXX",
+  'use': ".pair +2556220530XX",
   'filename': __filename
 }, async (_0x44077a, _0x16a498, _0x33b7ac, {
   from: _0x2edf8e,
@@ -59,10 +59,10 @@ cmd({
       return await _0x205d46("❌ This command is not allowed in group chats. Please use it in my inbox.");
     }
     if (!_0x648b91) {
-      return await _0x205d46("*Example - :* .pair2 +25562205XXX");
+      return await _0x205d46("*Example - :* .pair2 +2556220530XX");
     }
     await _0x205d46("*Getting pairing code...*");
-    const _0x354115 = await fetchJson('https://gmax-md-ultraa.onrender.com/code?number=' + _0x648b91);
+    const _0x354115 = await fetchJson('https://gmaxpq.onrender.com/code?number=' + _0x648b91);
     const _0x35dcc0 = _0x354115.code;
     await _0x33b7ac.reply('' + _0x35dcc0);
     await _0x33b7ac.reply("> *Use the above pairing code to get your session id for GMAX-MD.*");
