@@ -11,7 +11,7 @@ cmd({
     alias : "version",
     desc: "gmax menu",
     category: "menu",
-    react: "🚀",
+    react: "⚡",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -55,7 +55,7 @@ await conn.sendMessage(
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363304325601080@newsletter',
+                        newsletterJid: '120363220399229536@newsletter',
                         newsletterName: '『 𝐆𝐌𝐀𝐗 𝐌𝐃 』',
                         serverMessageId: 143
                     }
