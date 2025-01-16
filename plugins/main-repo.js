@@ -11,7 +11,7 @@ cmd({
   'alias': ['sc', "script", "info"],
   'desc': "Info about the bot repository",
   'category': "main",
-  'react': "🗂️",
+  'react': "⚡",
   'filename': __filename
 }, async (_0x50c93b, _0x176970, _0x38c197, {
   from: _0x55f885,
@@ -48,7 +48,7 @@ cmd({
         'forwardingScore': 0x3e7,
         'isForwarded': true,
         'forwardedNewsletterMessageInfo': {
-          'newsletterJid': '120363304325601080@newsletter',
+          'newsletterJid': '120363220399229536@newsletter',
           'newsletterName': "『 ɢᴍᴀx ᴍᴅ 』",
           'serverMessageId': 0x8f
         }
