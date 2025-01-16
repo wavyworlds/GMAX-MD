@@ -42,7 +42,7 @@ cmd({
   reply: _0x2c7dc6
 }) => {
   try {
-    const _0x54a5ab = "╭━━〔 *GMAX MD* 〕━━┈⊷\n\n┃◈╭─────────────·๏\n\n┃◈┃• *⏳Uptime*:  " + runtime(process.uptime()) + " \n\n┃◈┃• *📟 Ram usage*: " + (process.memoryUsage().heapUsed / 0x400 / 0x400).toFixed(0x2) + "MB / " + (os.totalmem() / 0x400 / 0x400).toFixed(0x2) + "MB\n\n┃◈┃• *⚙️ HostName*: " + os.hostname() + "\n\n┃◈┃• *👨‍💻 Owner*: Sir Gmax\n\n┃◈┃• *📂 Version*: 1.0.0\n\n┃◈└───────────┈⊷\n\n╰──────────────┈⊷\n\n> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɢᴍᴀx ᴍᴅ";
+    const _0x54a5ab = "╭━━〔 *GMAX MD* 〕━━┈⊷\n\n┃◈╭─────────────·๏\n\n┃◈┃• *⏳Uptime*:  " + runtime(process.uptime()) + " \n\n┃◈┃• *📟 Ram usage*: " + (process.memoryUsage().heapUsed / 0x400 / 0x400).toFixed(0x2) + "MB / " + (os.totalmem() / 0x400 / 0x400).toFixed(0x2) + "MB\n\n┃◈┃• *⚙️ HostName*: " + os.hostname() + "\n\n┃◈┃• *👨‍💻 Owner*: Sir Gmax\n\n┃◈┃• *📂 Version*: 1.0.3\n\n┃◈└───────────┈⊷\n\n╰──────────────┈⊷\n\n> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɢᴍᴀx ᴍᴅ";
     await _0x41fdca.sendMessage(_0x24d99b, {
       'image': {
         'url': "https://i.ibb.co/6BMJmGY/mrfrankofc.jpg"
@@ -53,7 +53,7 @@ cmd({
         'forwardingScore': 0x3e7,
         'isForwarded': true,
         'forwardedNewsletterMessageInfo': {
-          'newsletterJid': "120363304325601080@newsletter",
+          'newsletterJid': "120363220399229536@newsletter",
           'newsletterName': "『 𝐆𝐌𝐀𝐗 𝐌𝐃 』",
           'serverMessageId': 0x8f
         }
