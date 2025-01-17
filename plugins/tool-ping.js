@@ -14,21 +14,21 @@ async (conn, mek, m, { from, quoted, reply }) => {
         const startTime = Date.now();
 
         // Add a short delay
-        await new Promise(resolve => setTimeout(resolve, 100)); // 100ms delay
+        await new Promise(resolve => setTimeout(resolve, 10)); // 10ms delay
 
         const endTime = Date.now();
         const ping = endTime - startTime;
 
         // Send the ping result
         await conn.sendMessage(from, { 
-            text: `*❄️ เcε ɱεℓƭε∂ เɳ: ${ping}ms*`, 
+            text: `*_🚀 𝙶𝙼𝙰𝚇-ʙᴏᴛ...: ${ping}ms*`, 
             contextInfo: {
                 mentionedJid: [m.sender],
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363220399229536@newsletter',
-                    newsletterName: 'ɢᴍᴀx ᴍᴅ',
+                    newsletterName: '𝚐𝚖𝚊𝚡 𝚖𝚍',
                     serverMessageId: 143
                 }
             }
@@ -51,10 +51,10 @@ cmd({
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
         const startTime = Date.now()
-        const message = await conn.sendMessage(from, { text: '> ᴍᴇʟᴛɪɴɢ...*' })
+        const message = await conn.sendMessage(from, { text: '> *PINGING...*' })
         const endTime = Date.now()
         const ping = endTime - startTime
-        await conn.sendMessage(from, { text: `> *ɪᴄᴇ ᴍᴇʟᴛᴇᴅ ɪɴ 🔥  : ${ping}ms*` }, { quoted: message })
+        await conn.sendMessage(from, { text: `>*_🚀 𝙶𝙼𝙰𝚇-ʙᴏᴛ... : ${ping}ms*` }, { quoted: message })
     } catch (e) {
         console.log(e)
         reply(`${e}`)
