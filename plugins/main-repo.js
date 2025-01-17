@@ -9,7 +9,7 @@ cmd({
     pattern: "repo",
     alias: ["sc", "script", "info"],
     desc: "Fetch information about a GitHub repository.",
-    react: "⚡",
+    react: "❄️",
     category: "info",
     filename: __filename,
 },
@@ -34,7 +34,7 @@ async (conn, mek, m, { from, reply }) => {
 
 > Simple, Icy, Cold  & Rich Loaded Bot With Amazing Features, Gmax WhatsApp Bot. ❄️
 
-*Thanks for using GMAX MD🌹🫶* 
+*Thanks for using 𝙶𝙼𝙰𝚇 𝙼𝙳🌹🫶* 
 
 > Don't forget to star & fork the repo🌟🍴
 
@@ -56,11 +56,11 @@ ${readMore}
 \`DESCRIPTION:\`📃
 > ${repoData.description || 'No description'}\n
 ──────────────────
-\n> *© 𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝙶𝙼𝙰𝚇* 🎐`;
+\n> *© ροωєяє∂ ϐγ мя ɠɱαx* 🎐`;
 
         // Send an image with the formatted info as a caption and context info
         await conn.sendMessage(from, {
-            image: { url: `"https://i.ibb.co/6BMJmGY/mrfrankofc.jpg` },
+            image: { url: `https://i.ibb.co/hL71dDp/mrfrankofc.jpg` },
             caption: formattedInfo,
             contextInfo: { 
                 mentionedJid: [m.sender],
@@ -68,7 +68,7 @@ ${readMore}
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363220399229536@newsletter',
-                    newsletterName: '𝙶𝙼𝙰𝚇 𝙼𝙳 𝙱𝙾𝚃',
+                    newsletterName: 'ɠɱαx ɱԃ Ⴆσƚ',
                     serverMessageId: 143
                 }
             }
