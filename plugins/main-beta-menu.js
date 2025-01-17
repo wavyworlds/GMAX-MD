@@ -2,12 +2,11 @@ function hi() {
   console.log("Hello World!");
 }
 hi();
-const config = require('../config');
-const { cmd, commands } = require('../command');
-const os = require("os");
-const { runtime } = require('../lib/functions');
-const axios = require('axios');
-
+const config = require("../config");
+const {
+  cmd,
+  commands
+} = require("../command");
 cmd({
     pattern: "gmaxmenu",
     desc: "menu the bot",
