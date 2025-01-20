@@ -1,7 +1,3 @@
-function hi() {
-  console.log("Hello World!");
-}
-hi();
 const axios = require('axios');
 const config = require('../config');
 const { cmd, commands } = require('../command');
