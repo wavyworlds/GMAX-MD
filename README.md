@@ -71,21 +71,21 @@ You will need a session ID to run the GMAX-MD. Click the button below to obtain 
 
 > **1️⃣Pair Code (Session ID)**
 
-<a href='https://max-mega.onrender.com/' target="_blank">
+<a href='https://session1-8d0d2148f264.herokuapp.com/' target="_blank">
   <img alt='Pairing Code' src='https://img.shields.io/badge/Get%20Pairing%20Code-orange?style=for-the-badge&logo=opencv&logoColor=black'/>
 </a>
 <br> 
 
 > **2️⃣Pair Code (Session ID)**
 
-<a href='https://max-mega.onrender.com/' target="_blank">
+<a href='https://session1-8d0d2148f264.herokuapp.com/pair/' target="_blank">
   <img alt='Pairing Code' src='https://img.shields.io/badge/Get%20Pairing%20Code-darkpink?style=for-the-badge&logo=opencv&logoColor=black'/>
 </a>
 <br> 
 
 > **3️⃣Pair Code (Session ID)**
 
-<a href='https://max-mega.onrender.com/' target="_blank">
+<a href='https://session1-8d0d2148f264.herokuapp.com/' target="_blank">
   <img alt='Pairing Code' src='https://img.shields.io/badge/Get%20Pairing%20Code-cyan?style=for-the-badge&logo=opencv&logoColor=black'/>
 </a>
 <br> 
