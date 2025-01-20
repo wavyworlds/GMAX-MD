@@ -50,7 +50,7 @@ cmd({
         'forwardingScore': 0x3e7,
         'isForwarded': true,
         'forwardedNewsletterMessageInfo': {
-          'newsletterJid': "120363304325601080@newsletter",
+          'newsletterJid': "120363220399229536@newsletter",
           'newsletterName': "GMAX MD",
           'serverMessageId': 0x8f
         }
