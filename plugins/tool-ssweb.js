@@ -23,7 +23,7 @@ async (conn, mek, m, {
 
   try {
     
-    const response = await axios.get(`https://api.davidcyriltech.my.id/ssweb?url=${q}`);
+    const response = await axios.get(`https://api.giftedtech.web.id/api/tools/ssweb?apikey=gifted&url=${q}`);
     const screenshotUrl = response.data.screenshotUrl;
 
     // give credit and use
@@ -36,7 +36,7 @@ async (conn, mek, m, {
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
           newsletterJid: '120363220399229536@newsletter',
-          newsletterName: "Mr Gmax",
+          newsletterName: "sɪʀ ɢᴍᴀx",
           serverMessageId: 143,
         },
       },
