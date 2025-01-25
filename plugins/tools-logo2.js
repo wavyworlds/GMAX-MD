@@ -48,7 +48,7 @@ cmd(_0x1a0cd5, async (_0x500327, _0x56d921, _0x38f95e, {
       'image': {
         'url': "https://dummyimage.com/600x400/&text=" + _0x4ef5c5
       },
-      'caption': "© Gᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ɢᴍᴀx"
+      'caption': "© Gᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ɢᴍᴀx "
     }, _0x360a34);
   } catch (_0x49df19) {
     console.log(_0x49df19);
