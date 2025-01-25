@@ -1,30 +1,24 @@
 {
-  "name": "𝐆𝐌𝐀𝐗 𝐌𝐃",
-  "description": "A rich whatsapp bot by Sir Gmax",
+  "name": "GMAX-MD",
+  "description": "Whiskey Sockets Baileys Whatsapp bot By Mr Gmax",
   "logo": "https://i.ibb.co/6BMJmGY/mrfrankofc.jpg",
-  "keywords": ["gmax-bot"],
+  "keywords": ["GMAX-MD"],
   "success_url": "/",
 
     "stack": "container",
   "env": {
     "SESSION_ID": {
-      "description": "Put the your gmax session-id here.",
+      "description": "Put your Gmax session-id here.",
       "required": true,
       "value": ""
     },  
     
-    "ALIVE_IMG": {
-      "description": "paste your image url if you don't have you can use this public url.",
+    "STICKER_NAME": {
+      "description": "type your sticker pack name.",
       "required": false,
-      "value": "https://i.ibb.co/6BMJmGY/mrfrankofc.jpg"
+      "value": "𝙶𝙼𝙰𝚇-𝚆.𝙰 𝙱𝙾𝚃"
     }, 
-    
-    "LIVE_MSG": {
-      "description": "paste your alive message hear.",
-      "required": false,
-      "value": "> [❄️] gmax MD Is Online ⚡"
-    },
-    
+      
     "PREFIX": {
       "description": "paste your bot prefix note! Don't apply null prefix.",
       "required": false,
@@ -54,7 +48,7 @@
     "AUTO_REPLY": {
       "description": "Make it true if you want automatic reply.",
       "required": false,
-      "value": "true"
+      "value": "false"
     }, 
 
     "AUTO_STICKER": {
@@ -73,32 +67,33 @@
     "AUTO_STATUS_REPLY": {
       "description": "Make it true for auto reply msg on status seen.",
       "required": true,
-      "value": "true"
+      "value": "false"
     }, 
 
     "AUTO_STATUS_MSG": {
       "description": "Type custom message on status reply",
       "required": true,
-      "value": "*GMAX VIEWED YOUR STATUS 🧸*"
-    }, 
-
+      "value": "*𝕲𝖒𝖆𝖝 𝑽𝒊𝒆𝒘𝒆𝒅 𝒀𝒐𝒖𝒓 𝑺𝒕𝒂𝒕𝒖𝒔 🦄*"
+   
+     }, 
+    
     "OWNER_NAME": {
       "description": "Type Bot Owner Name.",
       "required": false,
-      "value": "sɪʀ ɢᴍᴀx"
+      "value": "𝐌𝐫 𝐆𝐦𝐚𝐱"
 }, 
 
     "OWNER_NUMBER": {
       "description": "put the owner number for bot.",
       "required": false,
-      "value": "255622053093"
+      "value": "2557538534XXXX"
 
     }, 
 
     "BOT_NAME": {
       "description": "Type here the bot name.",
       "required": false,
-      "value": "『 𝐆𝐌𝐀𝐗 𝐌𝐃 』"
+      "value": "GMAX-MD"
 
       }, 
 
@@ -158,10 +153,10 @@
       "value": "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍"
     }, 
     
-    "READ_CMD": {
-      "description": "make it true if want mark commands as read.",
+    "ANTI_DEL_PATH": {
+      "description": "change it to -same- if you want to resend deleted message in same chat",
       "required": false,
-      "value": "true"
+      "value": "log"
     }, 
 
     "READ_MESSAGE": {
