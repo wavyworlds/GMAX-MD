@@ -1,13 +1,73 @@
-
-
-
-
-
-
-
-
-
-
-
-
-const _0x3b17e9=_0x5751;function _0x5751(_0x3dc385,_0x2ccfc8){const _0x1babc5=_0x1bab();return _0x5751=function(_0x575177,_0x294d82){_0x575177=_0x575177-0x1a5;let _0x48b9b3=_0x1babc5[_0x575177];return _0x48b9b3;},_0x5751(_0x3dc385,_0x2ccfc8);}function _0x1bab(){const _0x4240cb=['5FBcZAo','2480492zhxlHl','2vbYZyU','.pair\x20+2556220530XXX','code','error','❌\x20This\x20command\x20is\x20not\x20allowed\x20in\x20group\x20chats.\x20Please\x20use\x20it\x20in\x20my\x20inbox.','832242DaUPwQ','9oEKXfC','clone','clone2','pair','download','2402191qYzOEu','getpair','reply','../command','>\x20*Use\x20the\x20above\x20pairing\x20code\x20to\x20get\x20your\x20session\x20id\x20for\x20GMAX-MD.*','message','5228960jiEjAW','pair2','106376XzDpsK','*Example\x20-\x20:*\x20.pair2\x20+2556220530XXX','*Getting\x20pairing\x20code...*','945276TZqROe','https://subzero-md-pair2.onrender.com/code?number=','855818pdbYik','210NSNBNS','*Example\x20-\x20:*\x20.pair\x20+2556220530XXX'];_0x1bab=function(){return _0x4240cb;};return _0x1bab();}(function(_0x2d1b32,_0x6dce45){const _0x15ed20=_0x5751,_0x5e19ae=_0x2d1b32();while(!![]){try{const _0x5e705c=-parseInt(_0x15ed20(0x1b3))/0x1*(-parseInt(_0x15ed20(0x1b8))/0x2)+parseInt(_0x15ed20(0x1bd))/0x3+parseInt(_0x15ed20(0x1b7))/0x4*(-parseInt(_0x15ed20(0x1b6))/0x5)+-parseInt(_0x15ed20(0x1b1))/0x6+-parseInt(_0x15ed20(0x1b4))/0x7*(-parseInt(_0x15ed20(0x1ae))/0x8)+-parseInt(_0x15ed20(0x1be))/0x9*(parseInt(_0x15ed20(0x1ac))/0xa)+parseInt(_0x15ed20(0x1a6))/0xb;if(_0x5e705c===_0x6dce45)break;else _0x5e19ae['push'](_0x5e19ae['shift']());}catch(_0x4a7b42){_0x5e19ae['push'](_0x5e19ae['shift']());}}}(_0x1bab,0x6dda6));const {cmd,commands}=require(_0x3b17e9(0x1a9)),{fetchJson}=require('../lib/functions');cmd({'pattern':_0x3b17e9(0x1c1),'alias':[_0x3b17e9(0x1a7),_0x3b17e9(0x1bf)],'react':'🔄','desc':_0x3b17e9(0x1c1),'category':_0x3b17e9(0x1a5),'use':_0x3b17e9(0x1b9),'filename':__filename},async(_0x27b138,_0x1e9ff3,_0x194381,{from:_0x377e1b,prefix:_0x583603,quoted:_0x5380b3,q:_0x11a944,reply:_0x1bfaac,isGroup:_0x15e1e6})=>{const _0x31df55=_0x3b17e9;try{if(_0x15e1e6)return await _0x1bfaac(_0x31df55(0x1bc));if(!_0x11a944)return await _0x1bfaac(_0x31df55(0x1b5));await _0x1bfaac(_0x31df55(0x1b0));const _0x45d8b5=await fetchJson(_0x31df55(0x1b2)+_0x11a944),_0x5278db=_0x45d8b5[_0x31df55(0x1ba)];await _0x194381[_0x31df55(0x1a8)](''+_0x5278db),await _0x194381[_0x31df55(0x1a8)](_0x31df55(0x1aa));}catch(_0x176bc8){console['error'](_0x176bc8),_0x1bfaac('An\x20error\x20occurred:\x20'+_0x176bc8['message']);}}),cmd({'pattern':_0x3b17e9(0x1ad),'alias':['getpair2',_0x3b17e9(0x1c0)],'react':'🔄','desc':_0x3b17e9(0x1c1),'category':'download','use':_0x3b17e9(0x1b9),'filename':__filename},async(_0x20b792,_0x1ceca7,_0x1c0675,{from:_0x222647,prefix:_0x57f1be,quoted:_0x4a0620,q:_0x21983e,reply:_0x4f82db,isGroup:_0x5dd7c8})=>{const _0x4e9b18=_0x3b17e9;try{if(_0x5dd7c8)return await _0x4f82db('❌\x20This\x20command\x20is\x20not\x20allowed\x20in\x20group\x20chats.\x20Please\x20use\x20it\x20in\x20my\x20inbox.');if(!_0x21983e)return await _0x4f82db(_0x4e9b18(0x1af));await _0x4f82db('*Getting\x20pairing\x20code...*');const _0x509bbb=await fetchJson('https://mrfrank2-subzero-pair.hf.space/code?number='+_0x21983e),_0x141fd6=_0x509bbb['code'];await _0x1c0675[_0x4e9b18(0x1a8)](''+_0x141fd6),await _0x1c0675[_0x4e9b18(0x1a8)](_0x4e9b18(0x1aa));}catch(_0x4a59d9){console[_0x4e9b18(0x1bb)](_0x4a59d9),_0x4f82db('An\x20error\x20occurred:\x20'+_0x4a59d9[_0x4e9b18(0x1ab)]);}});
+const {
+  cmd,
+  commands
+} = require('../command');
+const {
+  fetchJson
+} = require('../lib/functions');
+cmd({
+  'pattern': 'pair',
+  'alias': ["getpair", "clone"],
+  'react': '🔄',
+  'desc': "pair",
+  'category': "download",
+  'use': ".pair +25575385XXX",
+  'filename': __filename
+}, async (_0x53ef81, _0x3fcf12, _0x1cac84, {
+  from: _0x2eaa93,
+  prefix: _0x329d70,
+  quoted: _0x297544,
+  q: _0x283a2f,
+  reply: _0x20e232,
+  isGroup: _0x17a4ed
+}) => {
+  try {
+    if (_0x17a4ed) {
+      return await _0x20e232("❌ This command is not allowed in group chats. Please use it in my inbox.");
+    }
+    if (!_0x283a2f) {
+      return await _0x20e232("*Example - :* .pair +25575385XXX");
+    }
+    await _0x20e232("*Getting pairing code...*");
+    const _0x4504a8 = await fetchJson("https://progressive-priscilla-subzero00-f9e463d5.koyeb.app/code?number=" + _0x283a2f);
+    const _0x4bc4f7 = _0x4504a8.code;
+    await _0x1cac84.reply('' + _0x4bc4f7);
+    await _0x1cac84.reply("> *Use the above pairing code to get your session id for GMAX-MD.*");
+  } catch (_0x978c45) {
+    console.error(_0x978c45);
+    _0x20e232("An error occurred: " + _0x978c45.message);
+  }
+});
+cmd({
+  'pattern': 'pair2',
+  'alias': ['getpair2', "clone2"],
+  'react': '🔄',
+  'desc': "pair",
+  'category': 'download',
+  'use': ".pair +25575385XXX",
+  'filename': __filename
+}, async (_0x44077a, _0x16a498, _0x33b7ac, {
+  from: _0x2edf8e,
+  prefix: _0x5cec58,
+  quoted: _0x42fdaa,
+  q: _0x648b91,
+  reply: _0x205d46,
+  isGroup: _0x5953bb
+}) => {
+  try {
+    if (_0x5953bb) {
+      return await _0x205d46("❌ This command is not allowed in group chats. Please use it in my inbox.");
+    }
+    if (!_0x648b91) {
+      return await _0x205d46("*Example - :* .pair2 +25575385XXX");
+    }
+    await _0x205d46("*Getting pairing code...*");
+    const _0x354115 = await fetchJson('https://progressive-priscilla-subzero00-f9e463d5.koyeb.app/code?number=' + _0x648b91);
+    const _0x35dcc0 = _0x354115.code;
+    await _0x33b7ac.reply('' + _0x35dcc0);
+    await _0x33b7ac.reply("> *Use the above pairing code to get your session id for GMAX-MD.*");
+  } catch (_0x4da84d) {
+    console.error(_0x4da84d);
+    _0x205d46("An error occurred: " + _0x4da84d.message);
+  }
+});
