@@ -1,3 +1,7 @@
+
+
+
+
 const axios = require('axios');
 const config = require('../config');
 const { cmd, commands } = require('../command');
@@ -46,9 +50,9 @@ cmd({
 
     let message = '';
     if (currentVersion === latestVersion) {
-      message = `Your ɢᴍᴀx bot is up-to-date! 😊\n Current version is: ${currentVersion}`;
+      message = `Your Gmax bot is up-to-date! 😊\n Current version is: ${currentVersion}`;
     } else {
-      message = `Your ɢᴍᴀx bot is outdated 😵!\n\n  Current version: ${currentVersion} \n Latest version: ${latestVersion}`;
+      message = `Your Gmax bot is outdated 😵!\n\n  Current version: ${currentVersion} \n Latest version: ${latestVersion}`;
     }
 
    // await reply(message);
@@ -60,7 +64,7 @@ cmd({
 //});
        // Send the status message with an image
         await conn.sendMessage(from, { 
-            image: { url: `"https://i.ibb.co/6BMJmGY/mrfrankofc.jpg` },  // Image URL
+            image: { url: `https://i.ibb.co/6BMJmGY/mrfrankofc.jpg` },  // Image URL
             caption: message,
             contextInfo: {
                 mentionedJid: [m.sender],
@@ -75,7 +79,7 @@ cmd({
         }, { quoted: mek });
 
     } catch (e) {
-        console.error("Error in ɢᴍᴀx checking Version:", e);
+        console.error("Error in Subzero checking Version:", e);
         reply(`An error Occured Fetching Version 😕`);
     }
 });
