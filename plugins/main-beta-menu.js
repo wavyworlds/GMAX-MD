@@ -8,7 +8,7 @@ const {
   commands
 } = require("../command");
 cmd({
-    pattern: "gmaxmenu",
+    pattern: "menu3",
     desc: "menu the bot",
     category: "menu",
     react: "⚡",
