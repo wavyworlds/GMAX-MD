@@ -18,7 +18,7 @@ cmd({
       return reply("*Please provide a song name or keywords to search for.*");
     }
 
-    reply("```Subzero Searching for song...🔍```");
+    reply("*🎧 Searching for the song...*");
 
     const searchResults = await yts(searchQuery);
     if (!searchResults.videos || searchResults.videos.length === 0) {
