@@ -28,7 +28,7 @@ async (conn, mek, m, { from, quoted, reply }) => {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363220399229536@newsletter',
-                    newsletterName: 'GmaxTech',
+                    newsletterName: '『 𝐆𝐌𝐀𝐗 𝐌𝐃』',
                     serverMessageId: 143
                 }
             }
