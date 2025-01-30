@@ -13,9 +13,9 @@ const {
 const more = String.fromCharCode(0x200e);
 const readMore = more.repeat(0xfa1);
 cmd({
-  'pattern': "menu",
+  'pattern': "menu2",
   'desc': "gmax menu",
-  'category': "menu",
+  'category': "menu2",
   'react': '⚡',
   'filename': __filename
 }, async (_0x24e275, _0x4260e3, _0x4b76d8, {
