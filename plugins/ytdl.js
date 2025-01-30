@@ -1,15 +1,3 @@
-function hi() {
-  console.log("Hello World!");
-}
-hi();
-function hi() {
-  console.log("Hello World!");
-}
-hi();
-function hi() {
-  console.log("Hello World!");
-}
-hi();
 const {
   cmd,
   commands
@@ -18,25 +6,25 @@ const yts = require("yt-search");
 const {
   fetchJson
 } = require("../lib/functions");
-const axios = require("axios");
-async function ytmp4(_0x464909, _0x1e657a) {
+const axios = require('axios');
+async function ytmp4(_0x32b019, _0x339734) {
   try {
-    if (!_0x464909 || !_0x1e657a) {
+    if (!_0x32b019 || !_0x339734) {
       throw new Error("url and format parameters are required.");
     }
-    const _0x29bf2c = parseInt(_0x1e657a.replace('p', ''), 0xa);
-    const _0x4bdf7a = {
+    const _0xd702fb = parseInt(_0x339734.replace('p', ''), 0xa);
+    const _0x3cc703 = {
       'button': 0x1,
       'start': 0x1,
       'end': 0x1,
-      'format': _0x29bf2c,
-      'url': _0x464909
+      'format': _0xd702fb,
+      'url': _0x32b019
     };
-    const _0x5bb36e = {
-      'Accept': "*/*",
+    const _0x5a1205 = {
+      'Accept': '*/*',
       'Accept-Encoding': "gzip, deflate, br",
-      'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8',
-      'Origin': "https://loader.to",
+      'Accept-Language': "en-GB,en-US;q=0.9,en;q=0.8",
+      'Origin': 'https://loader.to',
       'Referer': "https://loader.to",
       'Sec-Ch-Ua': "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
       'Sec-Ch-Ua-Mobile': '?1',
@@ -46,455 +34,454 @@ async function ytmp4(_0x464909, _0x1e657a) {
       'Sec-Fetch-Site': "cross-site",
       'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36"
     };
-    const _0xad91bb = await axios.get("https://ab.cococococ.com/ajax/download.php", {
-      'params': _0x4bdf7a,
-      'headers': _0x5bb36e
+    const _0x4ee39c = await axios.get('https://ab.cococococ.com/ajax/download.php', {
+      'params': _0x3cc703,
+      'headers': _0x5a1205
     });
-    const _0x55f88c = _0xad91bb.data.id;
-    const _0xc2c82e = async () => {
-      const _0xf2a7a7 = {
-        'id': _0x55f88c
+    const _0x2d1163 = _0x4ee39c.data.id;
+    const _0x137113 = async () => {
+      const _0xab25fa = {
+        'id': _0x2d1163
       };
       try {
-        const _0xcb5dd3 = await axios.get("https://p.oceansaver.in/ajax/progress.php", {
-          'params': _0xf2a7a7,
-          'headers': _0x5bb36e
+        const _0xeafb6b = await axios.get("https://p.oceansaver.in/ajax/progress.php", {
+          'params': _0xab25fa,
+          'headers': _0x5a1205
         });
         const {
-          progress: _0x17d36e,
-          download_url: _0x46738c,
-          text: _0x16e74a
-        } = _0xcb5dd3.data;
-        return _0x16e74a === 'Finished' ? _0x46738c : (await new Promise(_0x372f9e => setTimeout(_0x372f9e, 0x3e8)), _0xc2c82e());
-      } catch (_0x1327bc) {
-        throw new Error("Error in progress check: " + _0x1327bc.message);
+          progress: _0x48ee9e,
+          download_url: _0xd7e658,
+          text: _0x245ada
+        } = _0xeafb6b.data;
+        return _0x245ada === "Finished" ? _0xd7e658 : (await new Promise(_0x485c8a => setTimeout(_0x485c8a, 0x3e8)), _0x137113());
+      } catch (_0x27cb21) {
+        throw new Error("Error in progress check: " + _0x27cb21.message);
       }
     };
-    return await _0xc2c82e();
-  } catch (_0x2c873f) {
-    console.error('Error:', _0x2c873f);
+    return await _0x137113();
+  } catch (_0x1503ed) {
+    console.error("Error:", _0x1503ed);
     return {
-      'error': _0x2c873f.message
+      'error': _0x1503ed.message
     };
   }
 }
 module.exports = {
   'ytmp4': ytmp4
 };
-function extractYouTubeId(_0x29838b) {
-  const _0x472e50 = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/|playlist\?list=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-  const _0x1acc68 = _0x29838b.match(_0x472e50);
-  return _0x1acc68 ? _0x1acc68[0x1] : null;
+function extractYouTubeId(_0x46641b) {
+  const _0x4d2333 = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/|playlist\?list=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+  const _0x4136c6 = _0x46641b.match(_0x4d2333);
+  return _0x4136c6 ? _0x4136c6[0x1] : null;
 }
-function convertYouTubeLink(_0x22623f) {
-  const _0x323973 = extractYouTubeId(_0x22623f);
-  if (_0x323973) {
-    return "https://www.youtube.com/watch?v=" + _0x323973;
+function convertYouTubeLink(_0x584404) {
+  const _0x58dae8 = extractYouTubeId(_0x584404);
+  if (_0x58dae8) {
+    return "https://www.youtube.com/watch?v=" + _0x58dae8;
   }
-  return _0x22623f;
+  return _0x584404;
 }
 cmd({
-  'pattern': 'song',
-  'alias': ['play', "ytmp3"],
+  'pattern': "song",
+  'alias': "play",
   'desc': "To download songs.",
-  'react': '🔎',
-  'category': 'download',
+  'react': '🎵',
+  'category': "download",
   'filename': __filename
-}, async (_0x367cec, _0xb72ac5, _0x3cd9f0, {
-  from: _0x6ae07,
-  quoted: _0x396e94,
-  body: _0x20c4c5,
-  isCmd: _0x4303a8,
-  command: _0x51a86a,
-  args: _0x37ced7,
-  q: _0x54a93c,
-  isGroup: _0x140750,
-  sender: _0x2d3e3,
-  senderNumber: _0xa78445,
-  botNumber2: _0xe0fd35,
-  botNumber: _0x2e2100,
-  pushname: _0x92bf30,
-  isMe: _0x4bec10,
-  isOwner: _0x3b8351,
-  groupMetadata: _0x146f74,
-  groupName: _0xfc3b15,
-  participants: _0x1359ce,
-  groupAdmins: _0x309893,
-  isBotAdmins: _0x1ac48a,
-  isAdmins: _0x38f068,
-  reply: _0x17d1d5
+}, async (_0x5351f6, _0x1439a7, _0x278458, {
+  from: _0x14fac3,
+  quoted: _0x2b9c51,
+  body: _0x5daecf,
+  isCmd: _0x34876e,
+  command: _0x536863,
+  args: _0x59cb59,
+  q: _0x380df9,
+  isGroup: _0x370f61,
+  sender: _0x34a112,
+  senderNumber: _0x291f83,
+  botNumber2: _0x5af75e,
+  botNumber: _0x1870b0,
+  pushname: _0x5d0cea,
+  isMe: _0x3c0b23,
+  isOwner: _0x341bbe,
+  groupMetadata: _0x44abd4,
+  groupName: _0x5de46d,
+  participants: _0x34f227,
+  groupAdmins: _0x548f13,
+  isBotAdmins: _0x9fa565,
+  isAdmins: _0x127641,
+  reply: _0x233cc6
 }) => {
   try {
-    if (!_0x54a93c) {
-      return _0x17d1d5("Please give me a URL or title. Eg .play Lily By Alan Walker");
+    if (!_0x380df9) {
+      return _0x233cc6("Please give me a URL or title.");
     }
-    _0x54a93c = convertYouTubeLink(_0x54a93c);
-    const _0x486603 = await yts(_0x54a93c);
-    const _0x1e663c = _0x486603.videos[0x0];
-    const _0xa49b2b = _0x1e663c.url;
-    const _0x1498a9 = await _0x367cec.sendMessage(_0x6ae07, {
+    _0x380df9 = convertYouTubeLink(_0x380df9);
+    const _0x54cf3a = await yts(_0x380df9);
+    const _0x20e1e8 = _0x54cf3a.videos[0x0];
+    const _0x5ed25e = _0x20e1e8.url;
+    const _0x166c67 = await _0x5351f6.sendMessage(_0x14fac3, {
       'image': {
-        'url': _0x1e663c.thumbnail
+        'url': _0x20e1e8.thumbnail
       },
-      'caption': "\n *❄️ ` ＧＭＡＸ- ＭＤ` ❄️*\n\n⟣━━━━━━━━━━━━━━━━━⟢\n*ɢᴍᴀx sᴏɴɢ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ*\n⟣━━━━━━━━━━━━━━━━━⟢\n\n➣ *🎐ɢᴍᴀx ʙᴏᴛ ᴄʜᴀɴɴᴇʟ🎐*\n*https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x*\n\n⟣━━━━━━━━━━━━━━━━━━⟢\n> ℹ️ ʀᴇᴘʟʏ ᴡɪᴛʜ ɴᴜᴍʙᴇʀ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ғᴏʀᴍᴀᴛ\n\n*1   ┃ ᴀᴜᴅɪᴏ sᴏɴɢ 🎵*\n*2   ┃ ᴅᴏᴄᴜᴍᴇɴᴛ sᴏɴɢ 🗂️*\n\n> © 𝐆𝐌𝐀𝐗 𝐌𝐃 𝐖.𝐀 𝐁𝐎𝐓\n"
+      'caption': "\n*❄️ＧＭＡＸ - ＭＤ❄️*\n\n ━━━━━━━━━━━━━━━━━\n*⟣ ɢᴍᴀx sᴏɴɢ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ⟢*\n━━━━━━━━━━━━━━━━━\n-  *ᴏᴜʀ ᴄʜᴀɴɴᴇʟ*\n\n*https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x*\n━━━━━━━━━━━━━━━━━━\n\n> ℹ️ ʀᴇᴘʟʏ ʙᴇʟᴏᴡ ᴛʜᴇ ɴᴜᴍʙᴇʀ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ғᴏʀᴍᴀᴛ\n\n*1   ┃ ᴀᴜᴅɪᴏ sᴏɴɢ🎵*\n*2   ┃  ᴅᴏᴄᴜᴍᴇɴᴛ sᴏɴɢ🗂️*\n\n> © 2025 || ɢᴍᴀx ᴍᴅ\n"
     }, {
-      'quoted': _0xb72ac5
+      'quoted': _0x1439a7
     });
-    const _0xecb16c = _0x1498a9.key.id;
-    _0x367cec.ev.on("messages.upsert", async _0x2dbd73 => {
-      const _0x576da0 = _0x2dbd73.messages[0x0];
-      if (!_0x576da0.message) {
+    const _0x164ac6 = _0x166c67.key.id;
+    _0x5351f6.ev.on("messages.upsert", async _0x11c496 => {
+      const _0x25ddf5 = _0x11c496.messages[0x0];
+      if (!_0x25ddf5.message) {
         return;
       }
-      const _0x33579f = _0x576da0.message.conversation || _0x576da0.message.extendedTextMessage?.['text'];
-      const _0x5e9d07 = _0x576da0.key.remoteJid;
-      const _0x1fcab8 = _0x576da0.message.extendedTextMessage && _0x576da0.message.extendedTextMessage.contextInfo.stanzaId === _0xecb16c;
-      if (_0x1fcab8) {
-        await _0x367cec.sendMessage(_0x5e9d07, {
+      const _0x5f20ab = _0x25ddf5.message.conversation || _0x25ddf5.message.extendedTextMessage?.["text"];
+      const _0x3277a3 = _0x25ddf5.key.remoteJid;
+      const _0x3cf2a8 = _0x25ddf5.message.extendedTextMessage && _0x25ddf5.message.extendedTextMessage.contextInfo.stanzaId === _0x164ac6;
+      if (_0x3cf2a8) {
+        await _0x5351f6.sendMessage(_0x3277a3, {
           'react': {
             'text': '⬇️',
-            'key': _0x576da0.key
+            'key': _0x25ddf5.key
           }
         });
-        const _0x1f015e = await fetchJson('https://api.davidcyriltech.my.id/download/ytmp3?url=' + _0xa49b2b);
-        const _0x19ea99 = _0x1f015e.result.download_url;
-        await _0x367cec.sendMessage(_0x5e9d07, {
-          'delete': _0x1498a9.key
+        const _0x1cc9d0 = await fetchJson('https://api.giftedtech.my.id/api/download/dlmp3?apikey=gifted&url=' + _0x5ed25e);
+        const _0x5741ec = _0x1cc9d0.result.download_url;
+        await _0x5351f6.sendMessage(_0x3277a3, {
+          'delete': _0x166c67.key
         });
-        await _0x367cec.sendMessage(_0x5e9d07, {
+        await _0x5351f6.sendMessage(_0x3277a3, {
           'react': {
             'text': '⬆️',
-            'key': _0x576da0.key
+            'key': _0x25ddf5.key
           }
         });
-        if (_0x33579f === '1') {
-          await _0x367cec.sendMessage(_0x5e9d07, {
+        if (_0x5f20ab === '1') {
+          await _0x5351f6.sendMessage(_0x3277a3, {
             'audio': {
-              'url': _0x19ea99
+              'url': _0x5741ec
             },
-            'mimetype': 'audio/mpeg',
+            'mimetype': "audio/mpeg",
             'contextInfo': {
               'externalAdReply': {
-                'title': _0x1e663c.title,
-                'body': _0x1e663c.videoId,
+                'title': _0x20e1e8.title,
+                'body': _0x20e1e8.videoId,
                 'mediaType': 0x1,
-                'sourceUrl': _0x1e663c.url,
-                'thumbnailUrl': _0x1e663c.thumbnail,
+                'sourceUrl': _0x20e1e8.url,
+                'thumbnailUrl': _0x20e1e8.thumbnail,
                 'renderLargerThumbnail': true,
                 'showAdAttribution': true
               }
             }
           }, {
-            'quoted': _0x576da0
+            'quoted': _0x25ddf5
           });
-          await _0x367cec.sendMessage(_0x5e9d07, {
+          await _0x5351f6.sendMessage(_0x3277a3, {
             'react': {
               'text': '✅',
-              'key': _0x576da0.key
+              'key': _0x25ddf5.key
             }
           });
-        } else if (_0x33579f === '2') {
-          await _0x367cec.sendMessage(_0x5e9d07, {
+        } else if (_0x5f20ab === '2') {
+          await _0x5351f6.sendMessage(_0x3277a3, {
             'document': {
-              'url': _0x19ea99
+              'url': _0x5741ec
             },
             'mimetype': "audio/mp3",
-            'fileName': _0x1e663c.title + '.mp3',
-            'caption': "\n> © Gᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ɢᴍᴀx ❤️\n"
+            'fileName': _0x20e1e8.title + ".mp3",
+            'caption': "\n*© Gᴇɴᴇʀᴀᴛᴇᴅ 4 Yᴏᴜ Bʏ ɢᴍᴀx🌟*\n "
           }, {
-            'quoted': _0x576da0
+            'quoted': _0x25ddf5
           });
-          await _0x367cec.sendMessage(_0x5e9d07, {
+          await _0x5351f6.sendMessage(_0x3277a3, {
             'react': {
               'text': '✅',
-              'key': _0x576da0.key
+              'key': _0x25ddf5.key
             }
           });
         }
       }
     });
-  } catch (_0x3e968c) {
-    console.log(_0x3e968c);
-    _0x17d1d5('' + _0x3e968c);
+  } catch (_0x3c31c1) {
+    console.log(_0x3c31c1);
+    _0x233cc6('' + _0x3c31c1);
   }
 });
 cmd({
   'pattern': 'video',
-  'alias': 'ytmp4',
   'desc': "To download videos.",
   'react': '🎥',
   'category': "download",
   'filename': __filename
-}, async (_0x501223, _0x401e54, _0x3fa8c2, {
-  from: _0x4b4c59,
-  quoted: _0x300d7,
-  body: _0x44b95d,
-  isCmd: _0x560846,
-  command: _0x2e2f96,
-  args: _0x1e5145,
-  q: _0x1ec4cf,
-  isGroup: _0x3734cc,
-  sender: _0x367f1f,
-  senderNumber: _0x54dd67,
-  botNumber2: _0x356a33,
-  botNumber: _0x5a2f23,
-  pushname: _0x1e6960,
-  isMe: _0x3dc452,
-  isOwner: _0xe6badb,
-  groupMetadata: _0x33758f,
-  groupName: _0x35d5ea,
-  participants: _0x36c3c8,
-  groupAdmins: _0x3fbf03,
-  isBotAdmins: _0x50ec83,
-  isAdmins: _0x102f8b,
-  reply: _0x4d8f6c
+}, async (_0x2a6587, _0x4b0a32, _0x3ae238, {
+  from: _0x2b34ab,
+  quoted: _0x2ba078,
+  body: _0x46f813,
+  isCmd: _0x3262b0,
+  command: _0x17c989,
+  args: _0x7df19c,
+  q: _0x2f11f7,
+  isGroup: _0xd32a93,
+  sender: _0x4f21a1,
+  senderNumber: _0x3cbd23,
+  botNumber2: _0x423dc5,
+  botNumber: _0x117579,
+  pushname: _0x256e29,
+  isMe: _0x10a986,
+  isOwner: _0x5415e8,
+  groupMetadata: _0x24abd2,
+  groupName: _0x31f52b,
+  participants: _0x3ff081,
+  groupAdmins: _0x5f0186,
+  isBotAdmins: _0xe9b71d,
+  isAdmins: _0x3186a2,
+  reply: _0x419796
 }) => {
   try {
-    if (!_0x1ec4cf) {
-      return _0x4d8f6c("Please give me a URL or title.");
+    if (!_0x2f11f7) {
+      return _0x419796("Please give me a URL or title.");
     }
-    _0x1ec4cf = convertYouTubeLink(_0x1ec4cf);
-    const _0x25ae70 = await yts(_0x1ec4cf);
-    const _0x32aefb = _0x25ae70.videos[0x0];
-    const _0x2f07c2 = _0x32aefb.url;
-    const _0x1bc911 = await _0x501223.sendMessage(_0x4b4c59, {
+    _0x2f11f7 = convertYouTubeLink(_0x2f11f7);
+    const _0x516cf9 = await yts(_0x2f11f7);
+    const _0x546126 = _0x516cf9.videos[0x0];
+    const _0x16c3d4 = _0x546126.url;
+    const _0x51503b = await _0x2a6587.sendMessage(_0x2b34ab, {
       'image': {
-        'url': _0x32aefb.thumbnail
+        'url': _0x546126.thumbnail
       },
-      'caption': "\n*❄️ＧＭＡＸ- ＭＤ❄️* \n\n┏━━━━━━━━━━━━━\n┃ɢᴍᴀx ᴍᴅ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ ✻\n┗━━━━━━━━━━━━━\n┏━━━━━━━━━━━━━━\n\n🔢 *ʀᴇᴘʟʏ ʙᴇʟᴏᴡ ᴛʜᴇ ɴᴜᴍʙᴇʀ ᴛᴏ*\n*ᴅᴏᴡɴʟᴏᴀᴅ ꜰʀᴏᴍᴀᴛ*\n\n*ᴅᴏᴡɴʟᴏᴀᴅ ᴠɪᴅᴇᴏ 🎬*\n\n*1.1*     ┃  *360ᴘ*\n*1.2*     ┃  *480ᴘ*\n*1.3*     ┃  *720ᴘ*\n*1.4*     ┃  *1080ᴘ*\n\n*ᴅᴏᴡɴʟᴏᴀᴅ ᴅᴏᴄᴜᴍᴇɴᴛ 📁*\n\n*2.1*     ┃  *360ᴘ*\n*2.2*     ┃  *480ᴘ*\n*2.3*     ┃  *720ᴘ*\n*2.4*     ┃  *1080ᴘ*\n\n> ɢᴍᴀx ᴍᴅ✻\n"
+      'caption': "\n*❄️ＧＭＡＸ - ＭＤ❄️* \n\n┏━━━━━━━━━━━━━\n┃ɢᴍᴀx ᴍᴅ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ ✻\n┗━━━━━━━━━━━━━\n┏━━━━━━━━━━━━━━\n\n🔢 *ʀᴇᴘʟʏ ʙᴇʟᴏᴡ ᴛʜᴇ ɴᴜᴍʙᴇʀ ᴛᴏ*\n*ᴅᴏᴡɴʟᴏᴀᴅ ꜰʀᴏᴍᴀᴛ*\n\n*ᴅᴏᴡɴʟᴏᴀᴅ ᴠɪᴅᴇᴏ 🎬*\n\n*1.1*     ┃  *360ᴘ*\n*1.2*     ┃  *480ᴘ*\n*1.3*     ┃  *720ᴘ*\n*1.4*     ┃  *1080ᴘ*\n\n*ᴅᴏᴡɴʟᴏᴀᴅ ᴅᴏᴄᴜᴍᴇɴᴛ 📁*\n\n*2.1*     ┃  *360ᴘ*\n*2.2*     ┃  *480ᴘ*\n*2.3*     ┃  *720ᴘ*\n*2.4*     ┃  *1080ᴘ*\n\n> ɢᴍᴀx ᴍᴅ✻\n"
     }, {
-      'quoted': _0x401e54
+      'quoted': _0x4b0a32
     });
     ;
-    const _0x239eff = _0x1bc911.key.id;
-    _0x501223.ev.on("messages.upsert", async _0x23645d => {
-      const _0x3d8e82 = _0x23645d.messages[0x0];
-      if (!_0x3d8e82.message) {
+    const _0x333085 = _0x51503b.key.id;
+    _0x2a6587.ev.on('messages.upsert', async _0xe7662f => {
+      const _0x3dce21 = _0xe7662f.messages[0x0];
+      if (!_0x3dce21.message) {
         return;
       }
-      const _0xb9ea27 = _0x3d8e82.message.conversation || _0x3d8e82.message.extendedTextMessage?.["text"];
-      const _0xc628aa = _0x3d8e82.key.remoteJid;
-      const _0x3e0409 = _0x3d8e82.message.extendedTextMessage && _0x3d8e82.message.extendedTextMessage.contextInfo.stanzaId === _0x239eff;
-      if (_0x3e0409) {
-        await _0x501223.sendMessage(_0xc628aa, {
+      const _0x1acf8d = _0x3dce21.message.conversation || _0x3dce21.message.extendedTextMessage?.["text"];
+      const _0x5cd381 = _0x3dce21.key.remoteJid;
+      const _0x5e3294 = _0x3dce21.message.extendedTextMessage && _0x3dce21.message.extendedTextMessage.contextInfo.stanzaId === _0x333085;
+      if (_0x5e3294) {
+        await _0x2a6587.sendMessage(_0x5cd381, {
           'react': {
             'text': '⬇️',
-            'key': _0x3d8e82.key
+            'key': _0x3dce21.key
           }
         });
-        if (_0xb9ea27 === "1.1") {
-          const _0x25c893 = await ytmp4('' + _0x2f07c2, '360p');
-          await _0x501223.sendMessage(_0xc628aa, {
-            'delete': _0x1bc911.key
+        if (_0x1acf8d === "1.1") {
+          const _0x404514 = await ytmp4('' + _0x16c3d4, "360p");
+          await _0x2a6587.sendMessage(_0x5cd381, {
+            'delete': _0x51503b.key
           });
-          await _0x501223.sendMessage(_0xc628aa, {
+          await _0x2a6587.sendMessage(_0x5cd381, {
             'react': {
               'text': '⬆️',
-              'key': _0x3d8e82.key
+              'key': _0x3dce21.key
             }
           });
-          await _0x501223.sendMessage(_0xc628aa, {
+          await _0x2a6587.sendMessage(_0x5cd381, {
             'video': {
-              'url': _0x25c893
+              'url': _0x404514
             },
             'caption': "\n*🌟Gᴇɴᴇʀᴀᴛᴇᴅ 4 Yᴏᴜ Bʏ ɢᴍᴀx🌟*\n"
           }, {
-            'quoted': _0x3d8e82
+            'quoted': _0x3dce21
           });
-          await _0x501223.sendMessage(_0xc628aa, {
+          await _0x2a6587.sendMessage(_0x5cd381, {
             'react': {
               'text': '✅',
-              'key': _0x3d8e82.key
+              'key': _0x3dce21.key
             }
           });
         } else {
-          if (_0xb9ea27 === '1.2') {
-            const _0x34844d = await ytmp4('' + _0x2f07c2, "480");
-            await _0x501223.sendMessage(_0xc628aa, {
-              'delete': _0x1bc911.key
+          if (_0x1acf8d === "1.2") {
+            const _0x13f213 = await ytmp4('' + _0x16c3d4, "480");
+            await _0x2a6587.sendMessage(_0x5cd381, {
+              'delete': _0x51503b.key
             });
-            await _0x501223.sendMessage(_0xc628aa, {
+            await _0x2a6587.sendMessage(_0x5cd381, {
               'react': {
                 'text': '🔃',
-                'key': _0x3d8e82.key
+                'key': _0x3dce21.key
               }
             });
-            await _0x501223.sendMessage(_0xc628aa, {
+            await _0x2a6587.sendMessage(_0x5cd381, {
               'video': {
-                'url': _0x34844d
+                'url': _0x13f213
               },
               'caption': "\n*🌟Gᴇɴᴇʀᴀᴛᴇᴅ 4 Yᴏᴜ Bʏ ɢᴍᴀx🌟*\n"
             }, {
-              'quoted': _0x3d8e82
+              'quoted': _0x3dce21
             });
-            await _0x501223.sendMessage(_0xc628aa, {
+            await _0x2a6587.sendMessage(_0x5cd381, {
               'react': {
                 'text': '✅',
-                'key': _0x3d8e82.key
+                'key': _0x3dce21.key
               }
             });
           } else {
-            if (_0xb9ea27 === "1.3") {
-              const _0x5e1da6 = await ytmp4('' + _0x2f07c2, "720");
-              await _0x501223.sendMessage(_0xc628aa, {
-                'delete': _0x1bc911.key
+            if (_0x1acf8d === "1.3") {
+              const _0x3e40d4 = await ytmp4('' + _0x16c3d4, '720');
+              await _0x2a6587.sendMessage(_0x5cd381, {
+                'delete': _0x51503b.key
               });
-              await _0x501223.sendMessage(_0xc628aa, {
+              await _0x2a6587.sendMessage(_0x5cd381, {
                 'react': {
                   'text': '⬆️',
-                  'key': _0x3d8e82.key
+                  'key': _0x3dce21.key
                 }
               });
-              await _0x501223.sendMessage(_0xc628aa, {
+              await _0x2a6587.sendMessage(_0x5cd381, {
                 'video': {
-                  'url': _0x5e1da6
+                  'url': _0x3e40d4
                 },
                 'caption': "\n*🌟Gᴇɴᴇʀᴀᴛᴇᴅ 4 Yᴏᴜ Bʏ ɢᴍᴀx🌟*\n"
               }, {
-                'quoted': _0x3d8e82
+                'quoted': _0x3dce21
               });
-              await _0x501223.sendMessage(_0xc628aa, {
+              await _0x2a6587.sendMessage(_0x5cd381, {
                 'react': {
                   'text': '✅',
-                  'key': _0x3d8e82.key
+                  'key': _0x3dce21.key
                 }
               });
             } else {
-              if (_0xb9ea27 === '1.4') {
-                const _0x1589f1 = await ytmp4('' + _0x2f07c2, "1080");
-                await _0x501223.sendMessage(_0xc628aa, {
-                  'delete': _0x1bc911.key
+              if (_0x1acf8d === '1.4') {
+                const _0x14529b = await ytmp4('' + _0x16c3d4, "1080");
+                await _0x2a6587.sendMessage(_0x5cd381, {
+                  'delete': _0x51503b.key
                 });
-                await _0x501223.sendMessage(_0xc628aa, {
+                await _0x2a6587.sendMessage(_0x5cd381, {
                   'react': {
                     'text': '⬆️',
-                    'key': _0x3d8e82.key
+                    'key': _0x3dce21.key
                   }
                 });
-                await _0x501223.sendMessage(_0xc628aa, {
+                await _0x2a6587.sendMessage(_0x5cd381, {
                   'video': {
-                    'url': _0x1589f1
+                    'url': _0x14529b
                   },
                   'caption': "\n*🌟Gᴇɴᴇʀᴀᴛᴇᴅ 4 Yᴏᴜ Bʏ ɢᴍᴀx🌟*\n"
                 }, {
-                  'quoted': _0x3d8e82
+                  'quoted': _0x3dce21
                 });
-                await _0x501223.sendMessage(_0xc628aa, {
+                await _0x2a6587.sendMessage(_0x5cd381, {
                   'react': {
                     'text': '✅',
-                    'key': _0x3d8e82.key
+                    'key': _0x3dce21.key
                   }
                 });
               } else {
-                if (_0xb9ea27 === "2.1") {
-                  const _0x5cd5ec = await ytmp4('' + _0x2f07c2, "360");
-                  await _0x501223.sendMessage(_0xc628aa, {
-                    'delete': _0x1bc911.key
+                if (_0x1acf8d === "2.1") {
+                  const _0x252f61 = await ytmp4('' + _0x16c3d4, "360");
+                  await _0x2a6587.sendMessage(_0x5cd381, {
+                    'delete': _0x51503b.key
                   });
-                  await _0x501223.sendMessage(_0xc628aa, {
+                  await _0x2a6587.sendMessage(_0x5cd381, {
                     'react': {
                       'text': '⬆️',
-                      'key': _0x3d8e82.key
+                      'key': _0x3dce21.key
                     }
                   });
-                  await _0x501223.sendMessage(_0xc628aa, {
+                  await _0x2a6587.sendMessage(_0x5cd381, {
                     'document': {
-                      'url': _0x5cd5ec
+                      'url': _0x252f61
                     },
-                    'mimetype': 'video/mp4',
-                    'fileName': _0x32aefb.title + '.mp4',
+                    'mimetype': "video/mp4",
+                    'fileName': _0x546126.title + ".mp4",
                     'caption': "\n*🌟Gᴇɴᴇʀᴀᴛᴇᴅ 4 Yᴏᴜ Bʏ ɢᴍᴀx🌟*\n"
                   }, {
-                    'quoted': _0x3d8e82
+                    'quoted': _0x3dce21
                   });
-                  await _0x501223.sendMessage(_0xc628aa, {
+                  await _0x2a6587.sendMessage(_0x5cd381, {
                     'react': {
                       'text': '✅',
-                      'key': _0x3d8e82.key
+                      'key': _0x3dce21.key
                     }
                   });
                 } else {
-                  if (_0xb9ea27 === "2.2") {
-                    const _0x516d28 = await ytmp4('' + _0x2f07c2, '480');
-                    await _0x501223.sendMessage(_0xc628aa, {
-                      'delete': _0x1bc911.key
+                  if (_0x1acf8d === '2.2') {
+                    const _0x1bbfe2 = await ytmp4('' + _0x16c3d4, '480');
+                    await _0x2a6587.sendMessage(_0x5cd381, {
+                      'delete': _0x51503b.key
                     });
-                    await _0x501223.sendMessage(_0xc628aa, {
+                    await _0x2a6587.sendMessage(_0x5cd381, {
                       'react': {
                         'text': '⬆️',
-                        'key': _0x3d8e82.key
+                        'key': _0x3dce21.key
                       }
                     });
-                    await _0x501223.sendMessage(_0xc628aa, {
+                    await _0x2a6587.sendMessage(_0x5cd381, {
                       'document': {
-                        'url': _0x516d28
+                        'url': _0x1bbfe2
                       },
-                      'mimetype': 'video/mp4',
-                      'fileName': _0x32aefb.title + ".mp4",
+                      'mimetype': "video/mp4",
+                      'fileName': _0x546126.title + ".mp4",
                       'caption': "\n*🌟Gᴇɴᴇʀᴀᴛᴇᴅ 4 Yᴏᴜ Bʏ ɢᴍᴀx🌟*\n"
                     }, {
-                      'quoted': _0x3d8e82
+                      'quoted': _0x3dce21
                     });
-                    await _0x501223.sendMessage(_0xc628aa, {
+                    await _0x2a6587.sendMessage(_0x5cd381, {
                       'react': {
                         'text': '✅',
-                        'key': _0x3d8e82.key
+                        'key': _0x3dce21.key
                       }
                     });
                   } else {
-                    if (_0xb9ea27 === '2.3') {
-                      const _0x5dffc6 = await ytmp4('' + _0x2f07c2, "720");
-                      await _0x501223.sendMessage(_0xc628aa, {
-                        'delete': _0x1bc911.key
+                    if (_0x1acf8d === "2.3") {
+                      const _0x24a2c5 = await ytmp4('' + _0x16c3d4, '720');
+                      await _0x2a6587.sendMessage(_0x5cd381, {
+                        'delete': _0x51503b.key
                       });
-                      await _0x501223.sendMessage(_0xc628aa, {
+                      await _0x2a6587.sendMessage(_0x5cd381, {
                         'react': {
                           'text': '⬆️',
-                          'key': _0x3d8e82.key
+                          'key': _0x3dce21.key
                         }
                       });
-                      await _0x501223.sendMessage(_0xc628aa, {
+                      await _0x2a6587.sendMessage(_0x5cd381, {
                         'document': {
-                          'url': _0x5dffc6
+                          'url': _0x24a2c5
                         },
                         'mimetype': "video/mp4",
-                        'fileName': _0x32aefb.title + ".mp4",
+                        'fileName': _0x546126.title + ".mp4",
                         'caption': "\n*🌟Gᴇɴᴇʀᴀᴛᴇᴅ 4 Yᴏᴜ Bʏ ɢᴍᴀx🌟*\n"
                       }, {
-                        'quoted': _0x3d8e82
+                        'quoted': _0x3dce21
                       });
-                      await _0x501223.sendMessage(_0xc628aa, {
+                      await _0x2a6587.sendMessage(_0x5cd381, {
                         'react': {
                           'text': '✅',
-                          'key': _0x3d8e82.key
+                          'key': _0x3dce21.key
                         }
                       });
                     } else {
-                      if (_0xb9ea27 === "2.4") {
-                        const _0x9e6c59 = await ytmp4('' + _0x2f07c2, "1080");
-                        await _0x501223.sendMessage(_0xc628aa, {
-                          'delete': _0x1bc911.key
+                      if (_0x1acf8d === '2.4') {
+                        const _0xfcc167 = await ytmp4('' + _0x16c3d4, "1080");
+                        await _0x2a6587.sendMessage(_0x5cd381, {
+                          'delete': _0x51503b.key
                         });
-                        await _0x501223.sendMessage(_0xc628aa, {
+                        await _0x2a6587.sendMessage(_0x5cd381, {
                           'react': {
                             'text': '⬆️',
-                            'key': _0x3d8e82.key
+                            'key': _0x3dce21.key
                           }
                         });
-                        await _0x501223.sendMessage(_0xc628aa, {
+                        await _0x2a6587.sendMessage(_0x5cd381, {
                           'document': {
-                            'url': _0x9e6c59
+                            'url': _0xfcc167
                           },
-                          'mimetype': 'video/mp4',
-                          'fileName': _0x32aefb.title + ".mp4",
+                          'mimetype': "video/mp4",
+                          'fileName': _0x546126.title + ".mp4",
                           'caption': "\n*🌟Gᴇɴᴇʀᴀᴛᴇᴅ 4 Yᴏᴜ Bʏ ɢᴍᴀx🌟*\n"
                         }, {
-                          'quoted': _0x3d8e82
+                          'quoted': _0x3dce21
                         });
-                        await _0x501223.sendMessage(_0xc628aa, {
+                        await _0x2a6587.sendMessage(_0x5cd381, {
                           'react': {
                             'text': '✅',
-                            'key': _0x3d8e82.key
+                            'key': _0x3dce21.key
                           }
                         });
                       }
@@ -507,50 +494,50 @@ cmd({
         }
       }
     });
-  } catch (_0x46026d) {
-    console.log(_0x46026d);
-    _0x4d8f6c('' + _0x46026d);
+  } catch (_0x2c8571) {
+    console.log(_0x2c8571);
+    _0x419796('' + _0x2c8571);
   }
 });
 cmd({
-  'pattern': "dee",
-  'alias': 'dilolo',
+  'pattern': "yta",
+  'alias': "ytmp3",
   'react': '⬇️',
   'dontAddCommandList': true,
   'filename': __filename
-}, async (_0x528ce1, _0x11edfc, _0x46fe4a, {
-  from: _0x563367,
-  q: _0x30bec9,
-  reply: _0x231249
+}, async (_0x47e326, _0x16846a, _0x46f567, {
+  from: _0x31abbc,
+  q: _0x507947,
+  reply: _0x17432c
 }) => {
   try {
-    if (!_0x30bec9) {
-      return await _0x231249("*Need a YouTube URL!*");
+    if (!_0x507947) {
+      return await _0x17432c("*Need a YouTube URL!*");
     }
-    const _0x3d0b00 = await dlyta(_0x30bec9);
-    await _0x528ce1.sendMessage(_0x563367, {
+    const _0x5df9ac = await dlyta(_0x507947);
+    await _0x47e326.sendMessage(_0x31abbc, {
       'audio': {
-        'url': _0x3d0b00.dl_link
+        'url': _0x5df9ac.dl_link
       },
       'mimetype': "audio/mpeg"
     }, {
-      'quoted': _0x11edfc
+      'quoted': _0x16846a
     });
-  } catch (_0x12b72c) {
-    console.log("First attempt failed:", _0x12b72c);
+  } catch (_0x42217d) {
+    console.log("First attempt failed:", _0x42217d);
     try {
-      const _0x487390 = await dlyta(_0x30bec9);
-      await _0x528ce1.sendMessage(_0x563367, {
+      const _0x9c7197 = await dlyta(_0x507947);
+      await _0x47e326.sendMessage(_0x31abbc, {
         'audio': {
-          'url': _0x487390.dl_link
+          'url': _0x9c7197.dl_link
         },
         'mimetype': "audio/mpeg"
       }, {
-        'quoted': _0x11edfc
+        'quoted': _0x16846a
       });
-    } catch (_0x2b0154) {
-      console.log("Second attempt failed:", _0x2b0154);
-      await _0x231249("*Failed to process the request. Please try again later!*");
+    } catch (_0x43638b) {
+      console.log("Second attempt failed:", _0x43638b);
+      await _0x17432c("*Failed to process the request. Please try again later!*");
     }
   }
 });
