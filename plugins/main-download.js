@@ -1,21 +1,17 @@
-function hi() {
-  console.log("Hello World!");
-}
-hi();
 const {
   fetchJson
-} = require('../lib/functions');
+} = require("../lib/functions");
 const {
   downloadTiktok
-} = require("@mrnima/tiktok-downloader");
+} = require('@mrnima/tiktok-downloader');
 const {
   facebook
-} = require('@mrnima/facebook-downloader');
+} = require("@mrnima/facebook-downloader");
 const cheerio = require("cheerio");
 const {
   igdl
 } = require("ruhend-scraper");
-const axios = require("axios");
+const axios = require('axios');
 const {
   cmd,
   commands
@@ -27,230 +23,230 @@ cmd({
   'desc': "download tt videos",
   'category': "download",
   'filename': __filename
-}, async (_0x5ae9c0, _0x3c333b, _0x2b4570, {
-  from: _0x9844ab,
-  quoted: _0x7df7b4,
-  body: _0xc7bd11,
-  isCmd: _0x40282a,
-  command: _0x3a1509,
-  args: _0x225720,
-  q: _0x41b239,
-  isGroup: _0x5e07ff,
-  sender: _0x4841c7,
-  senderNumber: _0x91626b,
-  botNumber2: _0xaaa8f4,
-  botNumber: _0x5df9a4,
-  pushname: _0x1f910c,
-  isMe: _0x2861a7,
-  isOwner: _0x5caa8a,
-  groupMetadata: _0x191640,
-  groupName: _0x20a3a6,
-  participants: _0x55627d,
-  groupAdmins: _0x634660,
-  isBotAdmins: _0x253299,
-  isAdmins: _0x17e8fe,
-  reply: _0xd1d81c
+}, async (_0xd77fff, _0x2db1f1, _0x352508, {
+  from: _0x5edbe4,
+  quoted: _0x29a457,
+  body: _0x538d0c,
+  isCmd: _0x34b8c9,
+  command: _0x43f30b,
+  args: _0x451bf4,
+  q: _0x56889c,
+  isGroup: _0x56a11d,
+  sender: _0x1b1b04,
+  senderNumber: _0x1f6214,
+  botNumber2: _0x5ec962,
+  botNumber: _0xfb7258,
+  pushname: _0x29e165,
+  isMe: _0x1c0206,
+  isOwner: _0x3f736e,
+  groupMetadata: _0x3d9ea0,
+  groupName: _0xf36703,
+  participants: _0x472058,
+  groupAdmins: _0x5e559d,
+  isBotAdmins: _0x1e7938,
+  isAdmins: _0x5b7729,
+  reply: _0x6868ae
 }) => {
   try {
-    if (!_0x41b239 && !_0x41b239.startsWith('https://')) {
-      return _0xd1d81c("*`Need url`*");
+    if (!_0x56889c && !_0x56889c.startsWith("https://")) {
+      return _0x6868ae("*`Need url`*");
     }
-    _0x2b4570.react('⬇️');
-    let _0x1a86fa = await downloadTiktok(_0x41b239);
-    let _0x2608b1 = "╭━━━〔 *GMAX-MD* 〕━━━┈⊷\n┃▸╭───────────\n┃▸┃๏ *TIKTOK DOWNLOADER*\n┃▸└───────────···๏\n╰────────────────┈⊷\n╭━━━❐━⪼\n┇๏ *Title* - " + _0x1a86fa.result.title + " \n╰━━━❐━⪼\n╭━❮ *Download Video* ❯━┈⊷\n┃▸╭─────────────·๏\n┃▸┃๏ *1*     ┃  *SD Quality*\n┃▸┃๏ *2*     ┃  *HD Quality*\n┃▸└────────────┈⊷\n╰━━━━━━━━━━━━━━━⪼\n╭━❮ *Download Audio* ❯━┈⊷\n┃▸╭─────────────·๏\n┃▸┃๏ *3*     ┃  *Audio*\n┃▸└────────────┈⊷\n╰━━━━━━━━━━━━━━━⪼\n> *© Pᴏᴡᴇʀᴇᴅ Bʏ ɢᴍᴀx*";
-    const _0x13dcc5 = await _0x5ae9c0.sendMessage(_0x9844ab, {
+    _0x352508.react('⬇️');
+    let _0x3cc321 = await downloadTiktok(_0x56889c);
+    let _0x17702e = "\n*⚬ɢᴍᴀx ᴍᴅ ᴛɪᴋᴛᴏᴋ⚬*  \n*ᴛɪᴛʟᴇ*:  " + _0x3cc321.result.title + "\n\n*🔢 ʀᴇᴘʟʏ ʙᴇʟᴏᴡ ᴛʜᴇ ɴᴜᴍʙᴇʀ*\n\n*ᴠɪᴅᴇᴏ ꜰɪʟᴇ* 🎬\n\n*1*     ┃  *ꜱᴅ Qᴜᴀʟɪᴛʏ*\n*2*     ┃  *ʜᴅ Qᴜᴀʟɪᴛʏ*\n\n*ᴀᴜᴅɪᴏ ꜰɪʟᴇ*🎧\n\n*3*     ┃  *ᴀᴜᴅɪᴏ*\n\n> GMAX-MD✻\n     ";
+    const _0x1a2830 = await _0xd77fff.sendMessage(_0x5edbe4, {
       'image': {
-        'url': _0x1a86fa.result.image
+        'url': _0x3cc321.result.image
       },
-      'caption': _0x2608b1
+      'caption': _0x17702e
     });
-    const _0x474438 = _0x13dcc5.key.id;
-    _0x5ae9c0.ev.on("messages.upsert", async _0x2ef136 => {
-      const _0x5df53b = _0x2ef136.messages[0x0];
-      if (!_0x5df53b.message) {
+    const _0x195026 = _0x1a2830.key.id;
+    _0xd77fff.ev.on("messages.upsert", async _0x3601c3 => {
+      const _0x58803e = _0x3601c3.messages[0x0];
+      if (!_0x58803e.message) {
         return;
       }
-      const _0x3c75c2 = _0x5df53b.message.conversation || _0x5df53b.message.extendedTextMessage?.['text'];
-      const _0x2e299b = _0x5df53b.key.remoteJid;
-      const _0x28cf6b = _0x5df53b.message.extendedTextMessage && _0x5df53b.message.extendedTextMessage.contextInfo.stanzaId === _0x474438;
-      if (_0x28cf6b) {
-        await _0x5ae9c0.sendMessage(_0x2e299b, {
+      const _0x33bcb9 = _0x58803e.message.conversation || _0x58803e.message.extendedTextMessage?.["text"];
+      const _0x41d115 = _0x58803e.key.remoteJid;
+      const _0x56fbde = _0x58803e.message.extendedTextMessage && _0x58803e.message.extendedTextMessage.contextInfo.stanzaId === _0x195026;
+      if (_0x56fbde) {
+        await _0xd77fff.sendMessage(_0x41d115, {
           'react': {
             'text': '⬇️',
-            'key': _0x5df53b.key
+            'key': _0x58803e.key
           }
         });
-        let _0x4b65bf = _0x1a86fa.result;
-        await _0x5ae9c0.sendMessage(_0x2e299b, {
+        let _0x5d2707 = _0x3cc321.result;
+        await _0xd77fff.sendMessage(_0x41d115, {
           'react': {
             'text': '⬆️',
-            'key': _0x5df53b.key
+            'key': _0x58803e.key
           }
         });
-        if (_0x3c75c2 === '1') {
-          await _0x5ae9c0.sendMessage(_0x2e299b, {
+        if (_0x33bcb9 === '1') {
+          await _0xd77fff.sendMessage(_0x41d115, {
             'video': {
-              'url': _0x4b65bf.dl_link.download_mp4_1
+              'url': _0x5d2707.dl_link.download_mp4_1
             },
-            'caption': "*© Powered Bʏ ɢᴍᴀx*"
+            'caption': "*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ɢᴍᴀxᴅ*"
           }, {
-            'quoted': _0x5df53b
+            'quoted': _0x58803e
           });
         } else {
-          if (_0x3c75c2 === '2') {
-            await _0x5ae9c0.sendMessage(_0x2e299b, {
+          if (_0x33bcb9 === '2') {
+            await _0xd77fff.sendMessage(_0x41d115, {
               'video': {
-                'url': _0x4b65bf.dl_link.download_mp4_2
+                'url': _0x5d2707.dl_link.download_mp4_2
               },
-              'caption': "*© Powered Bʏ ɢᴍᴀx*"
+              'caption': "*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ɢᴍᴀx ᴍᴅ· · ·²³⁷*"
             }, {
-              'quoted': _0x5df53b
+              'quoted': _0x58803e
             });
-          } else if (_0x3c75c2 === '3') {
-            await _0x5ae9c0.sendMessage(_0x2e299b, {
+          } else if (_0x33bcb9 === '3') {
+            await _0xd77fff.sendMessage(_0x41d115, {
               'audio': {
-                'url': _0x4b65bf.dl_link.download_mp3
+                'url': _0x5d2707.dl_link.download_mp3
               },
               'mimetype': "audio/mpeg"
             }, {
-              'quoted': _0x5df53b
+              'quoted': _0x58803e
             });
           }
         }
       }
     });
-  } catch (_0x52452c) {
-    console.log(_0x52452c);
-    _0xd1d81c('' + _0x52452c);
+  } catch (_0xb8e610) {
+    console.log(_0xb8e610);
+    _0x6868ae('' + _0xb8e610);
   }
 });
 cmd({
   'pattern': 'fb',
-  'alias': ['facebook'],
+  'alias': ["facebook"],
   'desc': "Download Facebook videos",
   'category': "download",
   'filename': __filename
-}, async (_0x54cfdd, _0x409152, _0x34d193, {
-  from: _0x4bb953,
-  quoted: _0x10d7b1,
-  body: _0x42454e,
-  isCmd: _0x3bb54b,
-  command: _0x1df1f5,
-  args: _0x4490ee,
-  q: _0x35674b,
-  isGroup: _0x48e836,
-  sender: _0x3b7a73,
-  senderNumber: _0xb6cf8b,
-  botNumber2: _0x4e0368,
-  botNumber: _0x34d40b,
-  pushname: _0xd9e744,
-  isMe: _0x5ea741,
-  isOwner: _0x238375,
-  groupMetadata: _0x4d4573,
-  groupName: _0x306c5d,
-  participants: _0x4ffb79,
-  groupAdmins: _0x57c1f2,
-  isBotAdmins: _0x472bc9,
-  isAdmins: _0x541c31,
-  reply: _0x1c785f
+}, async (_0x1ac136, _0x5aec6a, _0x326675, {
+  from: _0x1a04e3,
+  quoted: _0x2255fc,
+  body: _0x1f43bc,
+  isCmd: _0x1c2063,
+  command: _0x56b992,
+  args: _0x35d02b,
+  q: _0x3f223d,
+  isGroup: _0x4c9e5a,
+  sender: _0x2b95da,
+  senderNumber: _0x2557e4,
+  botNumber2: _0x288452,
+  botNumber: _0x27499e,
+  pushname: _0x16a64d,
+  isMe: _0x453f87,
+  isOwner: _0x2a8b1b,
+  groupMetadata: _0x1e68c5,
+  groupName: _0x4fa732,
+  participants: _0x37c313,
+  groupAdmins: _0x4d8ee2,
+  isBotAdmins: _0x443398,
+  isAdmins: _0x3ee4b7,
+  reply: _0x4bd709
 }) => {
   try {
-    if (!_0x35674b || !_0x35674b.startsWith("https://")) {
-      return _0x54cfdd.sendMessage(_0x4bb953, {
+    if (!_0x3f223d || !_0x3f223d.startsWith("https://")) {
+      return _0x1ac136.sendMessage(_0x1a04e3, {
         'text': "*`Need URL`*"
       }, {
-        'quoted': _0x409152
+        'quoted': _0x5aec6a
       });
     }
-    await _0x54cfdd.sendMessage(_0x4bb953, {
+    await _0x1ac136.sendMessage(_0x1a04e3, {
       'react': {
         'text': '⏳',
-        'key': _0x409152.key
+        'key': _0x5aec6a.key
       }
     });
-    const _0x1bf030 = await facebook(_0x35674b);
-    const _0x199e5e = "╭━━━〔 *GMAX-MD* 〕━━━┈⊷\n┃▸╭───────────\n┃▸┃๏ *FB DOWNLOADER*\n┃▸└───────────···๏\n╰────────────────┈⊷\n╭━━━❐━⪼\n┇๏ *Duration* - " + _0x1bf030.result.duration + " \n╰━━━❐━⪼\n╭━❮ *Download Video* ❯━┈⊷\n┃▸╭─────────────·๏\n┃▸┃๏ *1.1*     ┃  *SD Quality*\n┃▸┃๏ *1.2*     ┃  *HD Quality*\n┃▸└────────────┈⊷\n╰━━━━━━━━━━━━━━━⪼\n╭━❮ *Download Audio* ❯━┈⊷\n┃▸╭─────────────·๏\n┃▸┃๏ *2.1*     ┃  *Audio*\n┃▸┃๏ *2.2*     ┃  *Document*\n┃▸┃๏ *2.3*     ┃  *Voice*\n┃▸└────────────┈⊷\n╰━━━━━━━━━━━━━━━⪼\n> *© Pᴏᴡᴇʀᴇᴅ Bʏ ɢᴍᴀx ♡*";
-    const _0x570d56 = await _0x54cfdd.sendMessage(_0x4bb953, {
+    const _0x21f387 = await facebook(_0x3f223d);
+    const _0x3ec2b8 = "\n*⚬ɢᴍᴀx ᴍᴅ - ꜰʙ⚬*  \n*⌛ᴅᴜʀᴀᴛɪᴏɴ* : " + _0x21f387.result.duration + "\n\n*🔢 ʀᴇᴘʟʏ ʙᴇʟᴏᴡ ᴛʜᴇ ɴᴜᴍʙᴇʀ*\n\n*ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🎬*\n\n*1.1*     ┃  *ꜱᴅ Qᴜᴀʟɪᴛʏ*\n*1.2*     ┃  *ʜᴅ Qᴜᴀʟɪᴛʏ*\n\n*ᴀᴜᴅɪᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🎧*\n\n*2.1*     ┃  *ᴀᴜᴅɪᴏ*\n*2.2*     ┃  *ᴅᴏᴄᴜᴍᴇɴᴛ*\n*2.3*     ┃  *ᴠᴏɪᴄᴇ*\n\n> GMAX-MD✻\n";
+    const _0x113e79 = await _0x1ac136.sendMessage(_0x1a04e3, {
       'image': {
-        'url': _0x1bf030.result.thumbnail
+        'url': _0x21f387.result.thumbnail
       },
-      'caption': _0x199e5e
+      'caption': _0x3ec2b8
     }, {
-      'quoted': _0x409152
+      'quoted': _0x5aec6a
     });
-    const _0x35d60e = _0x570d56.key.id;
-    _0x54cfdd.ev.on("messages.upsert", async _0x12577b => {
-      const _0x1faf9f = _0x12577b.messages[0x0];
-      if (!_0x1faf9f.message) {
+    const _0x55f007 = _0x113e79.key.id;
+    _0x1ac136.ev.on("messages.upsert", async _0x3b66fb => {
+      const _0x5ded0a = _0x3b66fb.messages[0x0];
+      if (!_0x5ded0a.message) {
         return;
       }
-      const _0x42416c = _0x1faf9f.message.conversation || _0x1faf9f.message.extendedTextMessage?.["text"];
-      const _0x2007e6 = _0x1faf9f.key.remoteJid;
-      const _0x3d220b = _0x1faf9f.message.extendedTextMessage && _0x1faf9f.message.extendedTextMessage.contextInfo.stanzaId === _0x35d60e;
-      if (_0x3d220b) {
-        await _0x54cfdd.sendMessage(_0x2007e6, {
+      const _0x48db83 = _0x5ded0a.message.conversation || _0x5ded0a.message.extendedTextMessage?.["text"];
+      const _0x231677 = _0x5ded0a.key.remoteJid;
+      const _0x58b051 = _0x5ded0a.message.extendedTextMessage && _0x5ded0a.message.extendedTextMessage.contextInfo.stanzaId === _0x55f007;
+      if (_0x58b051) {
+        await _0x1ac136.sendMessage(_0x231677, {
           'react': {
             'text': '⬇️',
-            'key': _0x1faf9f.key
+            'key': _0x5ded0a.key
           }
         });
-        let _0x3f6883 = _0x1bf030.result;
-        await _0x54cfdd.sendMessage(_0x2007e6, {
+        let _0x2cfc3f = _0x21f387.result;
+        await _0x1ac136.sendMessage(_0x231677, {
           'react': {
             'text': '⬆️',
-            'key': _0x1faf9f.key
+            'key': _0x5ded0a.key
           }
         });
-        if (_0x42416c === "1.1") {
-          await _0x54cfdd.sendMessage(_0x2007e6, {
+        if (_0x48db83 === "1.1") {
+          await _0x1ac136.sendMessage(_0x231677, {
             'video': {
-              'url': _0x3f6883.links.SD
+              'url': _0x2cfc3f.links.SD
             },
-            'caption': "*© Powered Bʏ ɢᴍᴀx*"
+            'caption': "*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ɢᴍᴀx ᴍᴅ*"
           }, {
-            'quoted': _0x1faf9f
+            'quoted': _0x5ded0a
           });
         } else {
-          if (_0x42416c === "1.2") {
-            await _0x54cfdd.sendMessage(_0x2007e6, {
+          if (_0x48db83 === "1.2") {
+            await _0x1ac136.sendMessage(_0x231677, {
               'video': {
-                'url': _0x3f6883.links.HD
+                'url': _0x2cfc3f.links.HD
               },
-              'caption': "*© Powered Bʏ ɢᴍᴀx*"
+              'caption': "*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ɢᴍᴀx ᴍᴅ· · "
             }, {
-              'quoted': _0x1faf9f
+              'quoted': _0x5ded0a
             });
           } else {
-            if (_0x42416c === "2.1") {
-              await _0x54cfdd.sendMessage(_0x2007e6, {
+            if (_0x48db83 === "2.1") {
+              await _0x1ac136.sendMessage(_0x231677, {
                 'audio': {
-                  'url': _0x3f6883.links.SD
+                  'url': _0x2cfc3f.links.SD
                 },
                 'mimetype': "audio/mpeg"
               }, {
-                'quoted': _0x1faf9f
+                'quoted': _0x5ded0a
               });
             } else {
-              if (_0x42416c === "2.2") {
-                await _0x54cfdd.sendMessage(_0x2007e6, {
+              if (_0x48db83 === '2.2') {
+                await _0x1ac136.sendMessage(_0x231677, {
                   'document': {
-                    'url': _0x3f6883.links.SD
+                    'url': _0x2cfc3f.links.SD
                   },
-                  'mimetype': 'audio/mpeg',
-                  'fileName': "GMAX/FBDL.mp3",
-                  'caption': "*© Pᴏᴡᴇʀᴇᴅ Bʏ ɢᴍᴀx*"
+                  'mimetype': "audio/mpeg",
+                  'fileName': "KG/FBDL.mp3",
+                  'caption': "*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ɢᴍᴀx ᴍᴅ*"
                 }, {
-                  'quoted': _0x1faf9f
+                  'quoted': _0x5ded0a
                 });
-              } else if (_0x42416c === '2.3') {
-                await _0x54cfdd.sendMessage(_0x2007e6, {
+              } else if (_0x48db83 === "2.3") {
+                await _0x1ac136.sendMessage(_0x231677, {
                   'audio': {
-                    'url': _0x3f6883.links.SD
+                    'url': _0x2cfc3f.links.SD
                   },
-                  'mimetype': "audio/mp4",
+                  'mimetype': 'audio/mp4',
                   'ptt': true
                 }, {
-                  'quoted': _0x1faf9f
+                  'quoted': _0x5ded0a
                 });
               }
             }
@@ -258,140 +254,140 @@ cmd({
         }
       }
     });
-  } catch (_0x5d3f3d) {
-    console.log(_0x5d3f3d);
-    _0x1c785f('' + _0x5d3f3d);
+  } catch (_0x29aeea) {
+    console.log(_0x29aeea);
+    _0x4bd709('' + _0x29aeea);
   }
 });
 cmd({
   'pattern': "twitter",
   'alias': ['tweet', "twdl"],
   'desc': "Download Twitter videos",
-  'category': 'download',
+  'category': "download",
   'filename': __filename
-}, async (_0x400977, _0x50436f, _0x1f878d, {
-  from: _0x4d4663,
-  quoted: _0x1c31de,
-  body: _0x277ab1,
-  isCmd: _0xcb2860,
-  command: _0x4b9da5,
-  args: _0x2a07dc,
-  q: _0x206333,
-  isGroup: _0x59f93b,
-  sender: _0x48c787,
-  senderNumber: _0x52adec,
-  botNumber2: _0x3bd644,
-  botNumber: _0xc9a982,
-  pushname: _0x1cfb08,
-  isMe: _0x351ba6,
-  isOwner: _0x2dffe9,
-  groupMetadata: _0x365ad0,
-  groupName: _0x25e258,
-  participants: _0x23abe8,
-  groupAdmins: _0x3797c4,
-  isBotAdmins: _0x274c42,
-  isAdmins: _0x51965b,
-  reply: _0x31021d
+}, async (_0xaf8db8, _0x52bd10, _0x4b2f59, {
+  from: _0x1220b5,
+  quoted: _0x4cae8c,
+  body: _0x251a57,
+  isCmd: _0x25b51a,
+  command: _0x27443d,
+  args: _0x71c31d,
+  q: _0x7e7f9b,
+  isGroup: _0x5c2219,
+  sender: _0x3c6e22,
+  senderNumber: _0x21daa5,
+  botNumber2: _0x306e14,
+  botNumber: _0x2c38a2,
+  pushname: _0x3fee0f,
+  isMe: _0x4c03e9,
+  isOwner: _0x21c292,
+  groupMetadata: _0x35e2f2,
+  groupName: _0x29674e,
+  participants: _0x5ede8a,
+  groupAdmins: _0x3dbfbb,
+  isBotAdmins: _0x8b6d59,
+  isAdmins: _0x143cb9,
+  reply: _0x20e92a
 }) => {
   try {
-    if (!_0x206333 || !_0x206333.startsWith("https://")) {
-      return _0x400977.sendMessage(_0x4d4663, {
+    if (!_0x7e7f9b || !_0x7e7f9b.startsWith("https://")) {
+      return _0xaf8db8.sendMessage(_0x1220b5, {
         'text': "❌ Please provide a valid Twitter URL."
       }, {
-        'quoted': _0x50436f
+        'quoted': _0x52bd10
       });
     }
-    await _0x400977.sendMessage(_0x4d4663, {
+    await _0xaf8db8.sendMessage(_0x1220b5, {
       'react': {
         'text': '⏳',
-        'key': _0x50436f.key
+        'key': _0x52bd10.key
       }
     });
-    const _0x2cbeef = await axios.get("https://www.dark-yasiya-api.site/download/twitter?url=" + _0x206333);
-    const _0x2d5547 = _0x2cbeef.data;
-    if (!_0x2d5547 || !_0x2d5547.status || !_0x2d5547.result) {
-      return _0x1f878d.reply("Failed to retrieve Twitter video. Please check the link and try again.");
+    const _0x13f218 = await axios.get("https://api.giftedtech.my.id/api/download/twitter?apikey=gifted&url=" + _0x7e7f9b);
+    const _0x467ca1 = _0x13f218.data;
+    if (!_0x467ca1 || !_0x467ca1.status || !_0x467ca1.result) {
+      return _0x4b2f59.reply("Failed to retrieve Twitter video. Please check the link and try again.");
     }
     const {
-      desc: _0x574846,
-      thumb: _0x42fc8a,
-      video_sd: _0x50729,
-      video_hd: _0x3deca6
-    } = _0x2d5547.result;
-    const _0x4df14e = await _0x400977.sendMessage(_0x4d4663, {
+      desc: _0x2efe63,
+      thumb: _0x247442,
+      video_sd: _0x15a4a6,
+      video_hd: _0x3a7cd6
+    } = _0x467ca1.result;
+    const _0x57d52f = await _0xaf8db8.sendMessage(_0x1220b5, {
       'image': {
-        'url': _0x42fc8a
+        'url': _0x247442
       },
-      'caption': "╭━━━〔 *GMAX-MD* 〕━━━┈⊷\n┃▸╭───────────\n┃▸┃๏ *TWITTER DOWNLOADER*\n┃▸└───────────···๏\n╰────────────────┈⊷\n╭━❮ *Download Video* ❯━┈⊷\n┃▸╭─────────────·๏\n┃▸┃๏ *1.1*     ┃  *SD Quality*\n┃▸┃๏ *1.2*     ┃  *HD Quality*\n┃▸└────────────┈⊷\n╰━━━━━━━━━━━━━━━⪼\n╭━❮ *Download Audio* ❯━┈⊷\n┃▸╭─────────────·๏\n┃▸┃๏ *2.1*     ┃  *Audio*\n┃▸┃๏ *2.2*     ┃  *Document*\n┃▸┃๏ *2.3*     ┃  *Voice*\n┃▸└────────────┈⊷\n╰━━━━━━━━━━━━━━━⪼\n> *© Pᴏᴡᴇʀᴇᴅ Bʏ ɢᴍᴀx-Aɪ ♡*"
+      'caption': "\n*⚬ɢᴍᴀx ᴛᴡɪᴛᴇʀ⚬*  \n*🔢 ʀᴇᴘʟʏ ʙᴇʟᴏᴡ ᴛʜᴇ ɴᴜᴍʙᴇʀ*\n\n*ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🎬*\n\n*1.1*     ┃  *ꜱᴅ Qᴜᴀʟɪᴛʏ*\n*1.2*     ┃  *ʜᴅ Qᴜᴀʟɪᴛʏ*\n\n*ᴀᴜᴅɪᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🎧*\n\n*2.1*     ┃  *ᴀᴜᴅɪᴏ*\n*2.2*     ┃  *ᴅᴏᴄᴜᴍᴇɴᴛ*\n*2.3*     ┃  *ᴠᴏɪᴄᴇ*\n\n> ɢᴍᴀx✻\n"
     }, {
-      'quoted': _0x50436f
+      'quoted': _0x52bd10
     });
-    const _0x5cc4cf = _0x4df14e.key.id;
-    _0x400977.ev.on('messages.upsert', async _0x1390e0 => {
-      const _0x47e1b4 = _0x1390e0.messages[0x0];
-      if (!_0x47e1b4.message) {
+    const _0xcbea72 = _0x57d52f.key.id;
+    _0xaf8db8.ev.on('messages.upsert', async _0x3bf3b2 => {
+      const _0x2405c0 = _0x3bf3b2.messages[0x0];
+      if (!_0x2405c0.message) {
         return;
       }
-      const _0x493423 = _0x47e1b4.message.conversation || _0x47e1b4.message.extendedTextMessage?.["text"];
-      const _0x1aa453 = _0x47e1b4.key.remoteJid;
-      const _0x57f985 = _0x47e1b4.message.extendedTextMessage && _0x47e1b4.message.extendedTextMessage.contextInfo.stanzaId === _0x5cc4cf;
-      if (_0x57f985) {
-        await _0x400977.sendMessage(_0x1aa453, {
+      const _0x1e75d9 = _0x2405c0.message.conversation || _0x2405c0.message.extendedTextMessage?.["text"];
+      const _0x5eb615 = _0x2405c0.key.remoteJid;
+      const _0x4dbcb0 = _0x2405c0.message.extendedTextMessage && _0x2405c0.message.extendedTextMessage.contextInfo.stanzaId === _0xcbea72;
+      if (_0x4dbcb0) {
+        await _0xaf8db8.sendMessage(_0x5eb615, {
           'react': {
             'text': '⬇️',
-            'key': _0x47e1b4.key
+            'key': _0x2405c0.key
           }
         });
-        if (_0x493423 === "1.1") {
-          await _0x400977.sendMessage(_0x1aa453, {
+        if (_0x1e75d9 === "1.1") {
+          await _0xaf8db8.sendMessage(_0x5eb615, {
             'video': {
-              'url': _0x50729
+              'url': _0x15a4a6
             },
-            'caption': "*© Pᴏᴡᴇʀᴇᴅ Bʏ ɢᴍᴀx*"
+            'caption': "*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ɢᴍᴀx*"
           }, {
-            'quoted': _0x47e1b4
+            'quoted': _0x2405c0
           });
         } else {
-          if (_0x493423 === "1.2") {
-            await _0x400977.sendMessage(_0x1aa453, {
+          if (_0x1e75d9 === "1.2") {
+            await _0xaf8db8.sendMessage(_0x5eb615, {
               'video': {
-                'url': _0x3deca6
+                'url': _0x3a7cd6
               },
-              'caption': "*© Pᴏᴡᴇʀᴇᴅ Bʏ ɢᴍᴀx*"
+              'caption': "*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ GMAX-MD · · ·²³⁷*"
             }, {
-              'quoted': _0x47e1b4
+              'quoted': _0x2405c0
             });
           } else {
-            if (_0x493423 === '2.1') {
-              await _0x400977.sendMessage(_0x1aa453, {
+            if (_0x1e75d9 === "2.1") {
+              await _0xaf8db8.sendMessage(_0x5eb615, {
                 'audio': {
-                  'url': _0x50729
+                  'url': _0x15a4a6
                 },
-                'mimetype': "audio/mpeg"
+                'mimetype': 'audio/mpeg'
               }, {
-                'quoted': _0x47e1b4
+                'quoted': _0x2405c0
               });
             } else {
-              if (_0x493423 === "2.2") {
-                await _0x400977.sendMessage(_0x1aa453, {
+              if (_0x1e75d9 === "2.2") {
+                await _0xaf8db8.sendMessage(_0x5eb615, {
                   'document': {
-                    'url': _0x50729
+                    'url': _0x15a4a6
                   },
                   'mimetype': "audio/mpeg",
-                  'fileName': "GMAX/TWDL.mp3",
-                  'caption': "*© Pᴏᴡᴇʀᴇᴅ Bʏ ɢᴍᴀx*"
+                  'fileName': "ʟᴀʀᴀ-ᴍᴅ/TWDL.mp3",
+                  'caption': "*© CREATED BY GMAX-MD · · ·²³⁷*"
                 }, {
-                  'quoted': _0x47e1b4
+                  'quoted': _0x2405c0
                 });
-              } else if (_0x493423 === "2.3") {
-                await _0x400977.sendMessage(_0x1aa453, {
+              } else if (_0x1e75d9 === "2.3") {
+                await _0xaf8db8.sendMessage(_0x5eb615, {
                   'audio': {
-                    'url': _0x50729
+                    'url': _0x15a4a6
                   },
                   'mimetype': "audio/mp4",
                   'ptt': true
                 }, {
-                  'quoted': _0x47e1b4
+                  'quoted': _0x2405c0
                 });
               }
             }
@@ -399,171 +395,171 @@ cmd({
         }
       }
     });
-  } catch (_0x5cdcc3) {
-    console.log(_0x5cdcc3);
-    _0x31021d("An error occurred: " + _0x5cdcc3);
+  } catch (_0x17742e) {
+    console.log(_0x17742e);
+    _0x20e92a("An error occurred: " + _0x17742e);
   }
 });
 cmd({
-  'pattern': "mediafire",
+  'pattern': 'mediafire',
   'alias': ["mfire"],
   'desc': "To download MediaFire files.",
   'react': '🎥',
-  'category': "download",
+  'category': 'download',
   'filename': __filename
-}, async (_0x43359b, _0x37fd12, _0x22fdaa, {
-  from: _0x5e4e1b,
-  quoted: _0x4945cd,
-  body: _0x3ff829,
-  isCmd: _0x47c498,
-  command: _0x294e44,
-  args: _0xfde5a4,
-  q: _0x481ac5,
-  isGroup: _0x471195,
-  sender: _0x703b2d,
-  senderNumber: _0xaabab6,
-  botNumber2: _0x2f85a5,
-  botNumber: _0x8d3ff8,
-  pushname: _0x202559,
-  isMe: _0x5bb81c,
-  isOwner: _0x5ed012,
-  groupMetadata: _0x8d0f6e,
-  groupName: _0x33a222,
-  participants: _0xe6c465,
-  groupAdmins: _0x570c39,
-  isBotAdmins: _0xe9aa47,
-  isAdmins: _0x2908ad,
-  reply: _0x29c9aa
+}, async (_0x3ab728, _0x3d159f, _0x788d94, {
+  from: _0x47d2c3,
+  quoted: _0x4ccb03,
+  body: _0x5da797,
+  isCmd: _0xef7c33,
+  command: _0x2cb9f9,
+  args: _0x51e0d9,
+  q: _0x4da4fa,
+  isGroup: _0x54a73a,
+  sender: _0x386726,
+  senderNumber: _0xe2dfa3,
+  botNumber2: _0x1b6f1d,
+  botNumber: _0x15d2d5,
+  pushname: _0x3511db,
+  isMe: _0x4dc291,
+  isOwner: _0x36b0d6,
+  groupMetadata: _0x50729b,
+  groupName: _0x7d67ae,
+  participants: _0x57f6d6,
+  groupAdmins: _0x5296a0,
+  isBotAdmins: _0x54ad60,
+  isAdmins: _0x27f43f,
+  reply: _0x5e68b2
 }) => {
   try {
-    if (!_0x481ac5) {
-      return _0x22fdaa.reply("Please provide a valid MediaFire link.");
+    if (!_0x4da4fa) {
+      return _0x788d94.reply("Please provide a valid MediaFire link.");
     }
-    _0x22fdaa.react('⬇️');
-    const _0x1a6778 = await axios.get("https://www.dark-yasiya-api.site/download/mfire?url=" + _0x481ac5);
-    const _0x2b2be7 = _0x1a6778.data;
-    if (!_0x2b2be7 || !_0x2b2be7.status || !_0x2b2be7.result || !_0x2b2be7.result.dl_link) {
-      return _0x22fdaa.reply("Failed to fetch MediaFire download link. Ensure the link is valid and public.");
+    _0x788d94.react('⬇️');
+    const _0x206b82 = await axios.get('https://api.giftedtech.my.id/api/download/mediafiredl?apikey=gifted&url=' + _0x4da4fa);
+    const _0x2d69c7 = _0x206b82.data;
+    if (!_0x2d69c7 || !_0x2d69c7.status || !_0x2d69c7.result || !_0x2d69c7.result.dl_link) {
+      return _0x788d94.reply("Failed to fetch MediaFire download link. Ensure the link is valid and public.");
     }
-    const _0x1aacc6 = _0x2b2be7.result.dl_link;
-    const _0x5cfade = _0x2b2be7.result.fileName || "mediafire_download";
-    const _0x58eb24 = _0x2b2be7.result.fileType || "application/octet-stream";
-    _0x22fdaa.react('⬆️');
-    let _0x43057f = "╭━━━〔 *GMAX-MD* 〕━━━┈⊷\n┃▸╭───────────\n┃▸┃๏ *MFIRE DOWNLOADER*\n┃▸└───────────···๏\n╰────────────────┈⊷\n╭━━━❐━⪼\n┇๏ *File Name* - " + _0x5cfade + " \n┇๏ *File Type* - " + _0x58eb24 + " \n╰━━━❐━⪼\n> *© Pᴏᴡᴇʀᴇᴅ Bʏ ɢᴍᴀx*";
-    await _0x43359b.sendMessage(_0x5e4e1b, {
+    const _0x24c64d = _0x2d69c7.result.dl_link;
+    const _0x107843 = _0x2d69c7.result.fileName || "mediafire_download";
+    const _0xecfe76 = _0x2d69c7.result.fileType || "application/octet-stream";
+    _0x788d94.react('⬆️');
+    let _0x3ba839 = "\n        ┏━┫*⚬ɢᴍᴀx mediafire⚬*┣━✾\n┃  \n*ꜰɪʟᴇ ɴᴀᴍᴇ :* " + _0x107843 + "\n\n*ꜰɪʟᴇ ᴛʏᴘᴇ :* " + _0xecfe76 + "\n\n> ɢᴍᴀx✻\n        ";
+    await _0x3ab728.sendMessage(_0x47d2c3, {
       'document': {
-        'url': _0x1aacc6
+        'url': _0x24c64d
       },
-      'mimetype': _0x58eb24,
-      'fileName': _0x5cfade,
-      'caption': _0x43057f
+      'mimetype': _0xecfe76,
+      'fileName': _0x107843,
+      'caption': _0x3ba839
     }, {
-      'quoted': _0x37fd12
+      'quoted': _0x3d159f
     });
-  } catch (_0x3852d9) {
-    console.error(_0x3852d9);
-    _0x29c9aa("An error occurred: " + _0x3852d9.message);
+  } catch (_0x41ba96) {
+    console.error(_0x41ba96);
+    _0x5e68b2("An error occurred: " + _0x41ba96.message);
   }
 });
 cmd({
   'pattern': 'ig',
-  'alias': ['insta', "Instagram"],
+  'alias': ["insta"],
   'desc': "To download instagram videos.",
   'react': '🎥',
   'category': "download",
   'filename': __filename
-}, async (_0x1f1cd2, _0x32e92e, _0x9dcf1a, {
-  from: _0x45c7da,
-  quoted: _0x36d19b,
-  body: _0x3801bf,
-  isCmd: _0x3e59f2,
-  command: _0x18c45d,
-  args: _0x589738,
-  q: _0x26bbee,
-  isGroup: _0x32fd23,
-  sender: _0x31517e,
-  senderNumber: _0x3a401c,
-  botNumber2: _0x1d0315,
-  botNumber: _0x5485e6,
-  pushname: _0x161ba9,
-  isMe: _0x428f45,
-  isOwner: _0x998bd3,
-  groupMetadata: _0x1e0423,
-  groupName: _0xfd2117,
-  participants: _0x5ca132,
-  groupAdmins: _0x34a1eb,
-  isBotAdmins: _0x4520dc,
-  isAdmins: _0x3edbbf,
-  reply: _0x597309
+}, async (_0x386562, _0x1b4817, _0x2d5654, {
+  from: _0x2b1245,
+  quoted: _0x35994d,
+  body: _0x3ef60e,
+  isCmd: _0x445688,
+  command: _0x28d49a,
+  args: _0x353941,
+  q: _0x133e89,
+  isGroup: _0xae87fe,
+  sender: _0x2dff22,
+  senderNumber: _0x37d5bb,
+  botNumber2: _0x49a8d8,
+  botNumber: _0x2ef999,
+  pushname: _0x535d59,
+  isMe: _0x231e91,
+  isOwner: _0x299df6,
+  groupMetadata: _0x162e52,
+  groupName: _0x647ac4,
+  participants: _0x5409f2,
+  groupAdmins: _0x36386c,
+  isBotAdmins: _0x2ec1e7,
+  isAdmins: _0x318dfb,
+  reply: _0x1bd856
 }) => {
   try {
-    if (!_0x26bbee) {
-      return _0x9dcf1a.reply("Please Give Me a vaild Link...");
+    if (!_0x133e89) {
+      return _0x2d5654.reply("Please Give Me a vaild Link...");
     }
-    _0x9dcf1a.react('⬇️');
-    let _0x5e1325 = await igdl(_0x26bbee);
-    let _0x15bec5 = await _0x5e1325.data;
-    for (let _0x33bd45 = 0x0; _0x33bd45 < 0x14; _0x33bd45++) {
-      let _0x28d450 = _0x15bec5[_0x33bd45];
-      let _0x3c8ae4 = _0x28d450.url;
-      _0x9dcf1a.react('⬆️');
-      await _0x1f1cd2.sendMessage(_0x45c7da, {
+    _0x2d5654.react('⬇️');
+    let _0x46b060 = await igdl(_0x133e89);
+    let _0x2ec7e8 = await _0x46b060.data;
+    for (let _0x2c5a94 = 0x0; _0x2c5a94 < 0x14; _0x2c5a94++) {
+      let _0x226a29 = _0x2ec7e8[_0x2c5a94];
+      let _0x3d32a8 = _0x226a29.url;
+      _0x2d5654.react('⬆️');
+      await _0x386562.sendMessage(_0x2b1245, {
         'video': {
-          'url': _0x3c8ae4
+          'url': _0x3d32a8
         },
         'mimetype': "video/mp4",
-        'caption': "> *© Pᴏᴡᴇʀᴇᴅ Bʏ ɢᴍᴀx*"
+        'caption': "*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ GMAX-MD · · ·²³⁷*"
       }, {
-        'quoted': _0x32e92e
+        'quoted': _0x1b4817
       });
-      _0x9dcf1a.react('✅');
+      _0x2d5654.react('✅');
     }
-  } catch (_0x3ab295) {
-    console.log(_0x3ab295);
+  } catch (_0x169bd8) {
+    console.log(_0x169bd8);
   }
 });
-async function xdl(_0x871c2b) {
-  return new Promise((_0x2e53ee, _0x20023b) => {
-    fetch('' + _0x871c2b, {
+async function xdl(_0x1875a8) {
+  return new Promise((_0x22f9b0, _0x3f4b9e) => {
+    fetch('' + _0x1875a8, {
       'method': "get"
-    }).then(_0x1a834f => _0x1a834f.text()).then(_0x1a9bbb => {
-      const _0x1b7eab = cheerio.load(_0x1a9bbb, {
+    }).then(_0x3cefbd => _0x3cefbd.text()).then(_0x313b57 => {
+      const _0x469b1a = cheerio.load(_0x313b57, {
         'xmlMode': false
       });
-      const _0x3fea69 = _0x1b7eab("meta[property=\"og:title\"]").attr("content");
-      const _0x3369f1 = _0x1b7eab("meta[property=\"og:duration\"]").attr("content");
-      const _0x4ae4e6 = _0x1b7eab("meta[property=\"og:image\"]").attr("content");
-      const _0x2adcaa = _0x1b7eab("meta[property=\"og:video:type\"]").attr("content");
-      const _0x57a2b3 = _0x1b7eab("meta[property=\"og:video:width\"]").attr("content");
-      const _0x2bded2 = _0x1b7eab("meta[property=\"og:video:height\"]").attr("content");
-      const _0x42a42a = _0x1b7eab("span.metadata").text();
-      const _0x17c607 = _0x1b7eab("#video-player-bg > script:nth-child(6)").html();
-      const _0x2796b6 = {
-        'low': (_0x17c607.match("html5player.setVideoUrlLow\\('(.*?)'\\);") || [])[0x1],
-        'high': _0x17c607.match("html5player.setVideoUrlHigh\\('(.*?)'\\);" || [])[0x1],
-        'HLS': _0x17c607.match("html5player.setVideoHLS\\('(.*?)'\\);" || [])[0x1],
-        'thumb': _0x17c607.match("html5player.setThumbUrl\\('(.*?)'\\);" || [])[0x1],
-        'thumb69': _0x17c607.match("html5player.setThumbUrl169\\('(.*?)'\\);" || [])[0x1],
-        'thumbSlide': _0x17c607.match("html5player.setThumbSlide\\('(.*?)'\\);" || [])[0x1],
-        'thumbSlideBig': _0x17c607.match("html5player.setThumbSlideBig\\('(.*?)'\\);" || [])[0x1]
+      const _0x38f938 = _0x469b1a("meta[property=\"og:title\"]").attr('content');
+      const _0x15a94a = _0x469b1a("meta[property=\"og:duration\"]").attr("content");
+      const _0x555a9c = _0x469b1a("meta[property=\"og:image\"]").attr("content");
+      const _0x2c4ecd = _0x469b1a("meta[property=\"og:video:type\"]").attr("content");
+      const _0x3c4e1d = _0x469b1a("meta[property=\"og:video:width\"]").attr("content");
+      const _0x184840 = _0x469b1a("meta[property=\"og:video:height\"]").attr('content');
+      const _0x2275cf = _0x469b1a("span.metadata").text();
+      const _0x486d37 = _0x469b1a("#video-player-bg > script:nth-child(6)").html();
+      const _0x282510 = {
+        'low': (_0x486d37.match("html5player.setVideoUrlLow\\('(.*?)'\\);") || [])[0x1],
+        'high': _0x486d37.match("html5player.setVideoUrlHigh\\('(.*?)'\\);" || [])[0x1],
+        'HLS': _0x486d37.match("html5player.setVideoHLS\\('(.*?)'\\);" || [])[0x1],
+        'thumb': _0x486d37.match("html5player.setThumbUrl\\('(.*?)'\\);" || [])[0x1],
+        'thumb69': _0x486d37.match("html5player.setThumbUrl169\\('(.*?)'\\);" || [])[0x1],
+        'thumbSlide': _0x486d37.match("html5player.setThumbSlide\\('(.*?)'\\);" || [])[0x1],
+        'thumbSlideBig': _0x486d37.match("html5player.setThumbSlideBig\\('(.*?)'\\);" || [])[0x1]
       };
-      _0x2e53ee({
+      _0x22f9b0({
         'status': true,
         'result': {
-          'title': _0x3fea69,
-          'URL': _0x871c2b,
-          'duration': _0x3369f1,
-          'image': _0x4ae4e6,
-          'videoType': _0x2adcaa,
-          'videoWidth': _0x57a2b3,
-          'videoHeight': _0x2bded2,
-          'info': _0x42a42a,
-          'files': _0x2796b6
+          'title': _0x38f938,
+          'URL': _0x1875a8,
+          'duration': _0x15a94a,
+          'image': _0x555a9c,
+          'videoType': _0x2c4ecd,
+          'videoWidth': _0x3c4e1d,
+          'videoHeight': _0x184840,
+          'info': _0x2275cf,
+          'files': _0x282510
         }
       });
-    })["catch"](_0x356be5 => _0x20023b({
+    })["catch"](_0x502863 => _0x3f4b9e({
       'status': false,
-      'result': _0x356be5
+      'result': _0x502863
     }));
   });
 }
@@ -575,318 +571,318 @@ cmd({
   'category': "nsfw",
   'use': ".xnxx <xnxx link>",
   'filename': __filename
-}, async (_0x435b41, _0x4d5638, _0x77d4de, {
-  from: _0x46ff07,
-  l: _0x520351,
-  quoted: _0x5eb447,
-  body: _0x3029ae,
-  isCmd: _0x1d9dbb,
-  command: _0x4d1e6b,
-  args: _0x4edd10,
-  q: _0x2aab8b,
-  isGroup: _0x8f1df9,
-  sender: _0x2655cb,
-  senderNumber: _0x504deb,
-  botNumber2: _0x5c1827,
-  botNumber: _0x4c6515,
-  pushname: _0x43ba73,
-  isMe: _0x204bbd,
-  isOwner: _0x3e076a,
-  groupMetadata: _0x3b31ce,
-  groupName: _0x570c51,
-  participants: _0x2145f8,
-  groupAdmins: _0x3de22c,
-  isBotAdmins: _0x89bd77,
-  isAdmins: _0x4b986e,
-  reply: _0x301fd4
+}, async (_0x3fc871, _0x3d925e, _0x17916a, {
+  from: _0x57ce05,
+  l: _0xa610c0,
+  quoted: _0x3ba617,
+  body: _0x554283,
+  isCmd: _0x3469a3,
+  command: _0x94c3d2,
+  args: _0x16e2a1,
+  q: _0x1eede5,
+  isGroup: _0x23f46e,
+  sender: _0x312a3e,
+  senderNumber: _0x4ce309,
+  botNumber2: _0x3bb01c,
+  botNumber: _0x3636ad,
+  pushname: _0x267973,
+  isMe: _0x1b9df7,
+  isOwner: _0xe3d46e,
+  groupMetadata: _0x5ced92,
+  groupName: _0x2ef9fa,
+  participants: _0xb8c9e5,
+  groupAdmins: _0x45b015,
+  isBotAdmins: _0x1d1da6,
+  isAdmins: _0x40133b,
+  reply: _0x251394
 }) => {
   try {
-    if (!_0x2aab8b) {
-      return _0x301fd4("*Please give me url !!*");
+    if (!_0x1eede5) {
+      return _0x251394("*Please give me url !!*");
     }
-    let _0x330ccf = await xdl(_0x2aab8b);
-    let _0x2534b7 = _0x330ccf.result.title;
-    await _0x435b41.sendMessage(_0x46ff07, {
+    let _0x32cdc8 = await xdl(_0x1eede5);
+    let _0x255422 = _0x32cdc8.result.title;
+    await _0x3fc871.sendMessage(_0x57ce05, {
       'video': {
-        'url': _0x330ccf.result.files.high
+        'url': _0x32cdc8.result.files.high
       },
-      'caption': _0x2534b7
+      'caption': _0x255422
     }, {
-      'quoted': _0x4d5638
+      'quoted': _0x3d925e
     });
-  } catch (_0x309a73) {
-    _0x301fd4("*Error !!*");
-    console.log(_0x309a73);
+  } catch (_0xf619b4) {
+    _0x251394("*Error !!*");
+    console.log(_0xf619b4);
   }
 });
 cmd({
-  'pattern': 'xvdown',
+  'pattern': "xvdown",
   'alias': ["dlxv", "xvdl"],
   'react': '🫣',
   'desc': "Download xvideos videos",
-  'category': 'nsfw',
+  'category': "nsfw",
   'use': ".xv <xvideos link>",
   'filename': __filename
-}, async (_0x2ae57e, _0x30fbe9, _0x1312ab, {
-  from: _0x28e19a,
-  l: _0x51bc3d,
-  quoted: _0x2b72df,
-  body: _0x91316,
-  isCmd: _0x503ab1,
-  command: _0x4cef13,
-  args: _0x5eee26,
-  q: _0x5705d7,
-  isGroup: _0x4acbbd,
-  sender: _0x3d4b5b,
-  senderNumber: _0x400647,
-  botNumber2: _0x7537c3,
-  botNumber: _0x280913,
-  pushname: _0x5449dc,
-  isMe: _0x404a43,
-  isOwner: _0x11bf39,
-  groupMetadata: _0xe27fb7,
-  groupName: _0x591067,
-  participants: _0x3b528b,
-  groupAdmins: _0x54387d,
-  isBotAdmins: _0x1bef42,
-  isAdmins: _0x14f7d7,
-  reply: _0x3bc6af
+}, async (_0x247db1, _0x119628, _0xcf4960, {
+  from: _0x3b0c57,
+  l: _0x1d5f2b,
+  quoted: _0x4a0527,
+  body: _0x39aff3,
+  isCmd: _0x2fad82,
+  command: _0x470e95,
+  args: _0x2898f9,
+  q: _0xa91317,
+  isGroup: _0x220294,
+  sender: _0x53faf9,
+  senderNumber: _0xfda322,
+  botNumber2: _0x33cdc3,
+  botNumber: _0x3eab2d,
+  pushname: _0x248e0b,
+  isMe: _0x3fda84,
+  isOwner: _0x2fc437,
+  groupMetadata: _0x1e88b5,
+  groupName: _0x3d278c,
+  participants: _0x5a61ad,
+  groupAdmins: _0x105288,
+  isBotAdmins: _0x3a28bb,
+  isAdmins: _0x4c7d0d,
+  reply: _0x51e6c6
 }) => {
   try {
-    if (!_0x5705d7) {
-      return _0x3bc6af("*Please give me url !!*");
+    if (!_0xa91317) {
+      return _0x51e6c6("*Please give me url !!*");
     }
-    let _0x558196 = await fetchJson("https://www.dark-yasiya-api.site/download/xvideo?url=" + _0x5705d7);
-    const _0x952046 = "\n   🔞 *XVIDEO DOWNLOADER* 🔞\n\n     \n• *Title* - " + _0x558196.result.title + "\n\n• *Views* - " + _0x558196.result.views + "\n\n• *Like* - " + _0x558196.result.like + "\n\n• *Deslike* - " + _0x558196.result.deslike + "\n\n• *Size* - " + _0x558196.result.size;
-    await _0x2ae57e.sendMessage(_0x28e19a, {
+    let _0x5dfef2 = await fetchJson("https://api.giftedtech.my.id/api/download/xvideosdl?apikey=gifted&url=" + _0xa91317);
+    const _0x5a66af = "\n   🔞 *XVIDEO DOWNLOADER* 🔞\n\n     \n• *Title* - " + _0x5dfef2.result.title + "\n\n• *Views* - " + _0x5dfef2.result.views + "\n\n• *Like* - " + _0x5dfef2.result.like + "\n\n• *Deslike* - " + _0x5dfef2.result.deslike + "\n\n• *Size* - " + _0x5dfef2.result.size;
+    await _0x247db1.sendMessage(_0x3b0c57, {
       'video': {
-        'url': _0x558196.result.dl_link
+        'url': _0x5dfef2.result.dl_link
       },
-      'caption': _0x952046
+      'caption': _0x5a66af
     }, {
-      'quoted': _0x30fbe9
+      'quoted': _0x119628
     });
-  } catch (_0x218082) {
-    _0x3bc6af("*Error !!*");
-    console.log(_0x218082);
+  } catch (_0x2c19b6) {
+    _0x51e6c6("*Error !!*");
+    console.log(_0x2c19b6);
   }
 });
 const fs = require('fs');
-const path = require('path');
+const path = require("path");
 cmd({
-  'pattern': 'baiscope',
+  'pattern': "baiscope",
   'alias': ["movie2"],
   'react': '📑',
   'category': "download",
-  'desc': "baiscope.lk",
+  'desc': 'baiscope.lk',
   'filename': __filename
-}, async (_0x119094, _0x2fdf55, _0x5a8e90, {
-  from: _0x518a61,
-  q: _0x58de3c,
-  isDev: _0x278fb1,
-  reply: _0x1b72fd
+}, async (_0xe3f231, _0x4bd58e, _0x189921, {
+  from: _0x195bec,
+  q: _0x464db7,
+  isDev: _0x49b482,
+  reply: _0x4ee609
 }) => {
   try {
-    if (!_0x58de3c) {
-      return await _0x1b72fd("*Please provide a search query! (e.g., Avatar)*");
+    if (!_0x464db7) {
+      return await _0x4ee609("*Please provide a search query! (e.g., Avatar)*");
     }
-    const _0x2a841e = "https://www.baiscope.lk/?s=" + encodeURIComponent(_0x58de3c);
-    const _0x30e6e3 = await axios.get(_0x2a841e);
-    const _0x425c50 = cheerio.load(_0x30e6e3.data);
-    let _0x27fe64 = [];
-    _0x425c50('article.elementor-post').each((_0x12f2f9, _0x45303b) => {
-      const _0x286ba8 = _0x425c50(_0x45303b).find("h5.elementor-post__title > a").text().trim();
-      const _0x292c7e = _0x425c50(_0x45303b).find("h5.elementor-post__title > a").attr("href");
-      const _0x25e27c = _0x425c50(_0x45303b).find(".elementor-post__thumbnail img").attr("src");
-      if (_0x286ba8 && _0x292c7e && _0x25e27c) {
-        _0x27fe64.push({
-          'title': _0x286ba8,
-          'episodeLink': _0x292c7e,
-          'imgUrl': _0x25e27c
+    const _0x25ae15 = 'https://www.baiscope.lk/?s=' + encodeURIComponent(_0x464db7);
+    const _0x3ee23b = await axios.get(_0x25ae15);
+    const _0x50435e = cheerio.load(_0x3ee23b.data);
+    let _0x4d43f1 = [];
+    _0x50435e('article.elementor-post').each((_0x2b6f1e, _0x36c616) => {
+      const _0x4f2aba = _0x50435e(_0x36c616).find("h5.elementor-post__title > a").text().trim();
+      const _0x3e71ec = _0x50435e(_0x36c616).find("h5.elementor-post__title > a").attr("href");
+      const _0x4106eb = _0x50435e(_0x36c616).find(".elementor-post__thumbnail img").attr("src");
+      if (_0x4f2aba && _0x3e71ec && _0x4106eb) {
+        _0x4d43f1.push({
+          'title': _0x4f2aba,
+          'episodeLink': _0x3e71ec,
+          'imgUrl': _0x4106eb
         });
       }
     });
-    if (_0x27fe64.length === 0x0) {
-      return await _0x1b72fd("No results found for: " + _0x58de3c);
+    if (_0x4d43f1.length === 0x0) {
+      return await _0x4ee609("No results found for: " + _0x464db7);
     }
-    let _0x13fcf2 = "📺 Search Results for *" + _0x58de3c + ":*\n\n";
-    _0x27fe64.forEach((_0x1e4d2b, _0x27a529) => {
-      _0x13fcf2 += '*' + (_0x27a529 + 0x1) + ".* " + _0x1e4d2b.title + "\n🔗 Link: " + _0x1e4d2b.episodeLink + "\n\n";
+    let _0x14feea = "📺 Search Results for *" + _0x464db7 + ":*\n\n";
+    _0x4d43f1.forEach((_0x352480, _0x5acfc4) => {
+      _0x14feea += '*' + (_0x5acfc4 + 0x1) + ".* " + _0x352480.title + "\n🔗 Link: " + _0x352480.episodeLink + "\n\n";
     });
-    const _0x1e43cd = await _0x119094.sendMessage(_0x518a61, {
-      'text': _0x13fcf2
+    const _0x37c506 = await _0xe3f231.sendMessage(_0x195bec, {
+      'text': _0x14feea
     }, {
-      'quoted': _0x5a8e90
+      'quoted': _0x189921
     });
-    const _0x1ba2cb = _0x1e43cd.key.id;
-    _0x119094.ev.on('messages.upsert', async _0xb4c040 => {
-      const _0x4a5697 = _0xb4c040.messages[0x0];
-      if (!_0x4a5697.message) {
+    const _0x4e140d = _0x37c506.key.id;
+    _0xe3f231.ev.on("messages.upsert", async _0x29e3fd => {
+      const _0x28ef4d = _0x29e3fd.messages[0x0];
+      if (!_0x28ef4d.message) {
         return;
       }
-      const _0x42f493 = _0x4a5697.message.conversation || _0x4a5697.message.extendedTextMessage?.["text"];
-      const _0x135d64 = _0x4a5697.key.remoteJid;
-      const _0xba153d = _0x4a5697.message.extendedTextMessage && _0x4a5697.message.extendedTextMessage.contextInfo.stanzaId === _0x1ba2cb;
-      if (_0xba153d) {
-        const _0x2338cf = parseInt(_0x42f493.trim());
-        if (!isNaN(_0x2338cf) && _0x2338cf > 0x0 && _0x2338cf <= _0x27fe64.length) {
-          const _0x4caca7 = _0x27fe64[_0x2338cf - 0x1];
-          const _0x4c6ae7 = await axios.get(_0x4caca7.episodeLink);
-          const _0x90849d = cheerio.load(_0x4c6ae7.data);
-          const _0x1a4ea8 = _0x90849d('a.dlm-buttons-button').attr('href');
-          if (_0x1a4ea8) {
-            await _0x119094.sendMessage(_0x135d64, {
+      const _0x1f10f3 = _0x28ef4d.message.conversation || _0x28ef4d.message.extendedTextMessage?.["text"];
+      const _0x29ef5e = _0x28ef4d.key.remoteJid;
+      const _0x49bbc0 = _0x28ef4d.message.extendedTextMessage && _0x28ef4d.message.extendedTextMessage.contextInfo.stanzaId === _0x4e140d;
+      if (_0x49bbc0) {
+        const _0x34c5d6 = parseInt(_0x1f10f3.trim());
+        if (!isNaN(_0x34c5d6) && _0x34c5d6 > 0x0 && _0x34c5d6 <= _0x4d43f1.length) {
+          const _0x12f737 = _0x4d43f1[_0x34c5d6 - 0x1];
+          const _0x1cd6d7 = await axios.get(_0x12f737.episodeLink);
+          const _0x2d28d2 = cheerio.load(_0x1cd6d7.data);
+          const _0x16231a = _0x2d28d2("a.dlm-buttons-button").attr('href');
+          if (_0x16231a) {
+            await _0xe3f231.sendMessage(_0x29ef5e, {
               'image': {
-                'url': _0x4caca7.imgUrl
+                'url': _0x12f737.imgUrl
               },
-              'caption': "🎬 *" + _0x4caca7.title + "*\n🔗 Link: " + _0x4caca7.episodeLink + "\n⬇️ Download will follow."
+              'caption': "🎬 *" + _0x12f737.title + "*\n🔗 Link: " + _0x12f737.episodeLink + "\n⬇️ Download will follow."
             }, {
-              'quoted': _0x4a5697
+              'quoted': _0x28ef4d
             });
-            const _0x28536a = path.join(__dirname, "downloaded_episode.zip");
-            const _0x1a08bc = fs.createWriteStream(_0x28536a);
-            const _0x36d547 = await axios({
-              'url': _0x1a4ea8,
-              'method': 'GET',
+            const _0x32029c = path.join(__dirname, 'downloaded_episode.zip');
+            const _0x29c8e0 = fs.createWriteStream(_0x32029c);
+            const _0x23fc82 = await axios({
+              'url': _0x16231a,
+              'method': "GET",
               'responseType': "stream"
             });
-            _0x36d547.data.pipe(_0x1a08bc);
-            _0x1a08bc.on("finish", async () => {
-              await _0x119094.sendMessage(_0x135d64, {
+            _0x23fc82.data.pipe(_0x29c8e0);
+            _0x29c8e0.on("finish", async () => {
+              await _0xe3f231.sendMessage(_0x29ef5e, {
                 'document': {
-                  'url': _0x28536a
+                  'url': _0x32029c
                 },
                 'mimetype': "application/zip",
-                'fileName': _0x4caca7.title + ".zip",
-                'caption': '*' + _0x4caca7.title + "*\n\n> Lααɾα-ᴍᴅ ✻"
+                'fileName': _0x12f737.title + ".zip",
+                'caption': '*' + _0x12f737.title + "*\n\n> Lααɾα-ᴍᴅ ✻"
               }, {
-                'quoted': _0x4a5697
+                'quoted': _0x28ef4d
               });
-              fs.unlinkSync(_0x28536a);
+              fs.unlinkSync(_0x32029c);
             });
-            _0x1a08bc.on('error', _0x4cfcbf => {
-              console.error("Error downloading ZIP file:", _0x4cfcbf);
-              _0x1b72fd("*Error downloading the episode ZIP file.*");
+            _0x29c8e0.on("error", _0xf6647a => {
+              console.error("Error downloading ZIP file:", _0xf6647a);
+              _0x4ee609("*Error downloading the episode ZIP file.*");
             });
           } else {
-            await _0x1b72fd("*Download link not found for the selected episode.*");
+            await _0x4ee609("*Download link not found for the selected episode.*");
           }
         } else {
-          await _0x1b72fd("*Invalid selection. Please choose a valid number.*");
+          await _0x4ee609("*Invalid selection. Please choose a valid number.*");
         }
       }
     });
-  } catch (_0x3c1cad) {
-    console.error(_0x3c1cad);
-    await _0x1b72fd("*An error occurred while scraping the data.*");
+  } catch (_0x59ac25) {
+    console.error(_0x59ac25);
+    await _0x4ee609("*An error occurred while scraping the data.*");
   }
 });
 cmd({
-  'pattern': "ginisisila",
+  'pattern': 'ginisisila',
   'react': '📑',
   'category': 'download',
-  'desc': 'ginisisilacartoon.net',
+  'desc': "ginisisilacartoon.net",
   'filename': __filename
-}, async (_0x18e799, _0x5b0e42, _0x199241, {
-  from: _0x3a07e7,
-  q: _0xb03acc,
-  isDev: _0x451fe5,
-  reply: _0x2eaf08
+}, async (_0x5049fe, _0x194cab, _0x31c6bb, {
+  from: _0x2287e7,
+  q: _0x4564d6,
+  isDev: _0x2a68be,
+  reply: _0xc4807
 }) => {
   try {
-    if (!_0xb03acc) {
-      return await _0x2eaf08("*Please provide a search query! (e.g., Garfield)*");
+    if (!_0x4564d6) {
+      return await _0xc4807("*Please provide a search query! (e.g., Garfield)*");
     }
-    const _0x1af8bb = "https://ginisisilacartoon.net/search.php?q=" + encodeURIComponent(_0xb03acc);
-    const _0x2dbe37 = await axios.get(_0x1af8bb);
-    const _0x3baeea = cheerio.load(_0x2dbe37.data);
-    let _0x42527a = [];
-    _0x3baeea("div.inner-video-cell").each((_0x5aa3d5, _0x45f029) => {
-      const _0x4d8661 = _0x3baeea(_0x45f029).find("div.video-title > a").attr("title");
-      const _0x30ffda = _0x3baeea(_0x45f029).find("div.posted-time").text().trim();
-      const _0x5b5308 = _0x3baeea(_0x45f029).find("div.video-title > a").attr("href");
-      const _0x5ef472 = _0x3baeea(_0x45f029).find("div.inner-video-thumb-wrapper img").attr("src");
-      if (_0x4d8661 && _0x5b5308) {
-        _0x42527a.push({
-          'title': _0x4d8661,
-          'postedTime': _0x30ffda,
-          'episodeLink': 'https://ginisisilacartoon.net/' + _0x5b5308,
-          'imageUrl': _0x5ef472
+    const _0x2e5011 = "https://ginisisilacartoon.net/search.php?q=" + encodeURIComponent(_0x4564d6);
+    const _0x1a1ec0 = await axios.get(_0x2e5011);
+    const _0x4099bd = cheerio.load(_0x1a1ec0.data);
+    let _0x572788 = [];
+    _0x4099bd("div.inner-video-cell").each((_0xaa6fae, _0x2e2bcc) => {
+      const _0x4f6705 = _0x4099bd(_0x2e2bcc).find("div.video-title > a").attr('title');
+      const _0x599247 = _0x4099bd(_0x2e2bcc).find("div.posted-time").text().trim();
+      const _0x25bca3 = _0x4099bd(_0x2e2bcc).find("div.video-title > a").attr('href');
+      const _0x5d44de = _0x4099bd(_0x2e2bcc).find("div.inner-video-thumb-wrapper img").attr("src");
+      if (_0x4f6705 && _0x25bca3) {
+        _0x572788.push({
+          'title': _0x4f6705,
+          'postedTime': _0x599247,
+          'episodeLink': 'https://ginisisilacartoon.net/' + _0x25bca3,
+          'imageUrl': _0x5d44de
         });
       }
     });
-    if (_0x42527a.length === 0x0) {
-      return await _0x2eaf08("No results found for: " + _0xb03acc);
+    if (_0x572788.length === 0x0) {
+      return await _0xc4807("No results found for: " + _0x4564d6);
     }
-    let _0x460b8b = "📺 Search Results for *" + _0xb03acc + ":*\n\n";
-    _0x42527a.forEach((_0x10431c, _0x2425d9) => {
-      _0x460b8b += '*' + (_0x2425d9 + 0x1) + ".* " + _0x10431c.title + "\n🗓️ Posted: " + _0x10431c.postedTime + "\n🔗 Link: " + _0x10431c.episodeLink + "\n\n";
+    let _0x22c31b = "📺 Search Results for *" + _0x4564d6 + ":*\n\n";
+    _0x572788.forEach((_0x16cf4a, _0x35b536) => {
+      _0x22c31b += '*' + (_0x35b536 + 0x1) + ".* " + _0x16cf4a.title + "\n🗓️ Posted: " + _0x16cf4a.postedTime + "\n🔗 Link: " + _0x16cf4a.episodeLink + "\n\n";
     });
-    const _0x56ec96 = await _0x18e799.sendMessage(_0x3a07e7, {
-      'text': _0x460b8b
+    const _0x5a1342 = await _0x5049fe.sendMessage(_0x2287e7, {
+      'text': _0x22c31b
     }, {
-      'quoted': _0x199241
+      'quoted': _0x31c6bb
     });
-    const _0x1fc6bd = _0x56ec96.key.id;
-    _0x18e799.ev.on("messages.upsert", async _0x5dd909 => {
-      const _0x4fd426 = _0x5dd909.messages[0x0];
-      if (!_0x4fd426.message) {
+    const _0x27a596 = _0x5a1342.key.id;
+    _0x5049fe.ev.on("messages.upsert", async _0x9a7b7a => {
+      const _0x171143 = _0x9a7b7a.messages[0x0];
+      if (!_0x171143.message) {
         return;
       }
-      const _0x1c4419 = _0x4fd426.message.conversation || _0x4fd426.message.extendedTextMessage?.["text"];
-      const _0x568126 = _0x4fd426.key.remoteJid;
-      const _0x24db8a = _0x4fd426.message.extendedTextMessage && _0x4fd426.message.extendedTextMessage.contextInfo.stanzaId === _0x1fc6bd;
-      if (_0x24db8a) {
-        const _0x36f9f9 = parseInt(_0x1c4419.trim());
-        if (!isNaN(_0x36f9f9) && _0x36f9f9 > 0x0 && _0x36f9f9 <= _0x42527a.length) {
-          const _0x4e5378 = _0x42527a[_0x36f9f9 - 0x1];
-          const _0xded761 = "*🪄 ɴᴀᴍᴇ:-* " + _0x4e5378.title + "\n⏳ *ᴅᴀᴛᴇ:-* " + _0x4e5378.postedTime + "\n📎 *ᴇᴘɪꜱᴏᴅᴇ ʟɪɴᴋ*:- " + _0x4e5378.episodeLink + "\n\n☘ *We are uploading the Movie/Episode you requested.*";
-          const _0x187ea8 = {
+      const _0x14f608 = _0x171143.message.conversation || _0x171143.message.extendedTextMessage?.["text"];
+      const _0x4a17a3 = _0x171143.key.remoteJid;
+      const _0x14e10e = _0x171143.message.extendedTextMessage && _0x171143.message.extendedTextMessage.contextInfo.stanzaId === _0x27a596;
+      if (_0x14e10e) {
+        const _0x284411 = parseInt(_0x14f608.trim());
+        if (!isNaN(_0x284411) && _0x284411 > 0x0 && _0x284411 <= _0x572788.length) {
+          const _0x1d0aed = _0x572788[_0x284411 - 0x1];
+          const _0x189e89 = "*🪄 ɴᴀᴍᴇ:-* " + _0x1d0aed.title + "\n⏳ *ᴅᴀᴛᴇ:-* " + _0x1d0aed.postedTime + "\n📎 *ᴇᴘɪꜱᴏᴅᴇ ʟɪɴᴋ*:- " + _0x1d0aed.episodeLink + "\n\n☘ *We are uploading the Movie/Episode you requested.*";
+          const _0x456cc9 = {
             'image': {
-              'url': _0x4e5378.imageUrl
+              'url': _0x1d0aed.imageUrl
             },
-            'caption': _0xded761
+            'caption': _0x189e89
           };
-          await _0x18e799.sendMessage(_0x568126, _0x187ea8, {
-            'quoted': _0x4fd426
+          await _0x5049fe.sendMessage(_0x4a17a3, _0x456cc9, {
+            'quoted': _0x171143
           });
-          const _0x462cc7 = await axios.get(_0x4e5378.episodeLink);
-          const _0x48f6ca = cheerio.load(_0x462cc7.data);
-          const _0x310964 = _0x48f6ca("div#player-holder iframe").attr("src");
-          if (_0x310964) {
-            const _0xc4a381 = "https://api.fgmods.xyz/api/downloader/gdrive?url=" + _0x310964 + '&apikey=mnp3grlZ';
+          const _0x175d46 = await axios.get(_0x1d0aed.episodeLink);
+          const _0x1559da = cheerio.load(_0x175d46.data);
+          const _0x32f8e7 = _0x1559da("div#player-holder iframe").attr('src');
+          if (_0x32f8e7) {
+            const _0x1a4a74 = 'https://api.fgmods.xyz/api/downloader/gdrive?url=' + _0x32f8e7 + "&apikey=mnp3grlZ";
             try {
-              const _0x18c43c = await axios.get(_0xc4a381);
-              const _0x532c9f = _0x18c43c.data.result.downloadUrl;
-              if (_0x532c9f) {
-                await _0x18e799.sendMessage(_0x568126, {
+              const _0xc4e6f4 = await axios.get(_0x1a4a74);
+              const _0x46edb0 = _0xc4e6f4.data.result.downloadUrl;
+              if (_0x46edb0) {
+                await _0x5049fe.sendMessage(_0x4a17a3, {
                   'document': {
-                    'url': _0x532c9f
+                    'url': _0x46edb0
                   },
-                  'mimetype': 'video/mp4',
-                  'fileName': "MR GMAX | " + _0x4e5378.title + '.mp4',
-                  'caption': _0x4e5378.title + " | *© Pᴏᴡᴇʀᴇᴅ Bʏ ɢᴍᴀx*"
+                  'mimetype': "video/mp4",
+                  'fileName': "MR JANIYA | " + _0x1d0aed.title + '.mp4',
+                  'caption': _0x1d0aed.title + " |  *ᴍʀ ғʀᴀɴᴋ *\n\n> sᴜʙᴢᴇʀᴏ ᴍᴅ"
                 }, {
-                  'quoted': _0x4fd426
+                  'quoted': _0x171143
                 });
               } else {
-                await _0x2eaf08("Failed to retrieve the download link for this episode.");
+                await _0xc4807("Failed to retrieve the download link for this episode.");
               }
-            } catch (_0x5596c7) {
-              console.error("Error fetching the download link:", _0x5596c7);
-              await _0x2eaf08("An error occurred while trying to fetch the download link.");
+            } catch (_0x587198) {
+              console.error("Error fetching the download link:", _0x587198);
+              await _0xc4807("An error occurred while trying to fetch the download link.");
             }
           } else {
-            await _0x2eaf08("No downloadable link found for this episode.");
+            await _0xc4807("No downloadable link found for this episode.");
           }
         } else {
-          await _0x2eaf08("Please reply with a valid number from the list.");
+          await _0xc4807("Please reply with a valid number from the list.");
         }
       }
     });
-  } catch (_0x3f053b) {
-    _0x2eaf08("*Error occurred while scraping!*");
-    console.error(_0x3f053b);
+  } catch (_0x546741) {
+    _0xc4807("*Error occurred while scraping!*");
+    console.error(_0x546741);
   }
 });
 cmd({
@@ -894,55 +890,55 @@ cmd({
   'desc': "Download apk.",
   'category': "download",
   'filename': __filename
-}, async (_0x431328, _0x2aebd9, _0x29da74, {
-  from: _0x17ed1b,
-  quoted: _0x3b3c93,
-  body: _0x599b2c,
-  isCmd: _0x56c6bc,
-  command: _0x674fa2,
-  args: _0x4b82e0,
-  q: _0xeddfaa,
-  isGroup: _0x26e635,
-  sender: _0x5da46f,
-  senderNumber: _0x5a30a2,
-  botNumber2: _0x5bb9b3,
-  botNumber: _0x5e7e12,
-  pushname: _0x361a76,
-  isMe: _0x280328,
-  isOwner: _0x4e654c,
-  groupMetadata: _0x18bce1,
-  groupName: _0x161184,
-  participants: _0x266f3f,
-  groupAdmins: _0x4ed238,
-  isBotAdmins: _0x57bfe5,
-  isAdmins: _0x17195b,
-  reply: _0x46869b
+}, async (_0x56da32, _0x48f780, _0x3cbff5, {
+  from: _0xbd3b9f,
+  quoted: _0x4b0680,
+  body: _0x47a4ce,
+  isCmd: _0x29a752,
+  command: _0x2a8424,
+  args: _0x250a28,
+  q: _0x54cc58,
+  isGroup: _0x16cbe0,
+  sender: _0x17550c,
+  senderNumber: _0x556524,
+  botNumber2: _0x16c4b8,
+  botNumber: _0xd53bda,
+  pushname: _0x294a90,
+  isMe: _0x398266,
+  isOwner: _0x42c853,
+  groupMetadata: _0x45e657,
+  groupName: _0x446505,
+  participants: _0x4fde9a,
+  groupAdmins: _0x3535c9,
+  isBotAdmins: _0x14db6c,
+  isAdmins: _0x459724,
+  reply: _0x31b608
 }) => {
   try {
-    await _0x29da74.react('⬇');
-    const _0x20944e = "http://ws75.aptoide.com/api/7/apps/search/query=" + _0xeddfaa + '/limit=1';
-    const _0x58fd62 = await axios.get(_0x20944e);
-    const _0x562333 = _0x58fd62.data;
-    let _0x3527e5 = _0x562333.datalist.list[0x0].size % 0xf4240;
-    let _0x37fe2e = '.' + _0x3527e5;
-    let _0x2ad20a = _0x562333.datalist.list[0x0].size / 0xf4240;
-    let _0x110876 = _0x2ad20a - _0x37fe2e;
-    let _0x376294 = "╭━〔 *GMAX-APPSTORE* 〕━┈⊷\n┃▸╭───────────\n┃▸┃๏ *APK DOWNLOADER*\n┃▸└───────────···๏\n╰────────────────┈⊷\n╭━━━❐━⪼\n┇๏ *Name* - " + _0x562333.datalist.list[0x0].name + " \n┇๏ *Size* - " + _0x110876 + "MB \n┇๏ *Package* - " + _0x562333.datalist.list[0x0]["package"] + " \n┇๏ *Updated On* - " + _0x562333.datalist.list[0x0].updated + " \n┇๏ *Developer* - " + _0x562333.datalist.list[0x0].developer.name + " \n╰━━━❐━⪼\n> *© Gᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ɢᴍᴀx*";
-    await _0x29da74.react('⬆');
-    await _0x431328.sendMessage(_0x17ed1b, {
+    await _0x3cbff5.react('⬇');
+    const _0x34981b = "http://ws75.aptoide.com/api/7/apps/search/query=" + _0x54cc58 + '/limit=1';
+    const _0xefc061 = await axios.get(_0x34981b);
+    const _0x35ebe9 = _0xefc061.data;
+    let _0x9dad20 = _0x35ebe9.datalist.list[0x0].size % 0xf4240;
+    let _0xd49d48 = '.' + _0x9dad20;
+    let _0x1d38a3 = _0x35ebe9.datalist.list[0x0].size / 0xf4240;
+    let _0x5a853a = _0x1d38a3 - _0xd49d48;
+    let _0x408ceb = "\n*⚬ɢᴍᴀx ᴍᴅ ᴀᴘᴋ⚬*  \n*🏷️ Nᴀᴍᴇ :* " + _0x35ebe9.datalist.list[0x0].name + "\n\n*📦 Sɪᴢᴇ :* " + _0x5a853a + "MB\n\n*🔖 Pᴀᴄᴋᴀɢᴇ :* " + _0x35ebe9.datalist.list[0x0]['package'] + "\n\n*📆 Lᴀꜱᴛ Uᴘᴅᴀᴛᴇ :* " + _0x35ebe9.datalist.list[0x0].updated + "\n\n*👤 Dᴇᴠᴇʟᴏᴘᴇʀꜱ :* " + _0x35ebe9.datalist.list[0x0].developer.name + "\n\n> ᴍᴀᴅᴇ ʙʏ ɢᴍᴀx ᴍᴅ\n";
+    await _0x3cbff5.react('⬆');
+    await _0x56da32.sendMessage(_0xbd3b9f, {
       'document': {
-        'url': _0x562333.datalist.list[0x0].file.path_alt
+        'url': _0x35ebe9.datalist.list[0x0].file.path_alt
       },
-      'fileName': _0x562333.datalist.list[0x0].name,
+      'fileName': _0x35ebe9.datalist.list[0x0].name,
       'mimetype': "application/vnd.android.package-archive",
-      'caption': _0x376294
+      'caption': _0x408ceb
     }, {
-      'quoted': _0x2aebd9
+      'quoted': _0x48f780
     });
-    await _0x29da74.react('✅');
-  } catch (_0x2018c6) {
-    console.log(_0x2018c6);
-    _0x46869b('' + _0x2018c6);
+    await _0x3cbff5.react('✅');
+  } catch (_0x26a136) {
+    console.log(_0x26a136);
+    _0x31b608('' + _0x26a136);
   }
 });
 const {
@@ -950,204 +946,204 @@ const {
 } = require("mrnima-moviedl");
 cmd({
   'pattern': "sinhalasub",
-  'alias': ['movie'],
+  'alias': ["movie"],
   'react': '📑',
   'category': "download",
   'desc': "Search movies on sinhalasub and get download links",
   'filename': __filename
-}, async (_0x2bc69a, _0x38095e, _0x39354f, {
-  from: _0x2958ae,
-  q: _0x3ff8b3,
-  reply: _0x26d7d6
+}, async (_0x3dfd8e, _0x4ceff8, _0xe26d99, {
+  from: _0x4a183a,
+  q: _0x2f9e41,
+  reply: _0x20f27b
 }) => {
   try {
-    if (!_0x3ff8b3) {
-      return await _0x26d7d6("*Please provide a search query! (e.g., Deadpool)*");
+    if (!_0x2f9e41) {
+      return await _0x20f27b("*Please provide a search query! (e.g., Deadpool)*");
     }
-    var _0x12e4b7 = await sinhalaSub();
-    const _0x4698e5 = await _0x12e4b7.search(_0x3ff8b3);
-    const _0x8d5c1 = _0x4698e5.result.slice(0x0, 0xa);
-    if (!_0x8d5c1 || _0x8d5c1.length === 0x0) {
-      return await _0x26d7d6("No results found for: " + _0x3ff8b3);
+    var _0xb3afe = await sinhalaSub();
+    const _0x5c943b = await _0xb3afe.search(_0x2f9e41);
+    const _0x66d8c6 = _0x5c943b.result.slice(0x0, 0xa);
+    if (!_0x66d8c6 || _0x66d8c6.length === 0x0) {
+      return await _0x20f27b("No results found for: " + _0x2f9e41);
     }
-    let _0x3c237b = "📽️ *Search Results for* \"" + _0x3ff8b3 + "\":\n\n";
-    _0x8d5c1.forEach((_0x3911aa, _0x3da105) => {
-      _0x3c237b += '*' + (_0x3da105 + 0x1) + ".* " + _0x3911aa.title + "\n🔗 Link: " + _0x3911aa.link + "\n\n";
+    let _0x563ad3 = "📽️ *Search Results for* \"" + _0x2f9e41 + "\":\n\n";
+    _0x66d8c6.forEach((_0x5634fb, _0x85e080) => {
+      _0x563ad3 += '*' + (_0x85e080 + 0x1) + ".* " + _0x5634fb.title + "\n🔗 Link: " + _0x5634fb.link + "\n\n";
     });
-    const _0x2e742f = await _0x2bc69a.sendMessage(_0x2958ae, {
-      'text': _0x3c237b
+    const _0x5c02b8 = await _0x3dfd8e.sendMessage(_0x4a183a, {
+      'text': _0x563ad3
     }, {
-      'quoted': _0x39354f
+      'quoted': _0xe26d99
     });
-    const _0x7e6837 = _0x2e742f.key.id;
-    _0x2bc69a.ev.on("messages.upsert", async _0x275eb7 => {
-      const _0x377e4f = _0x275eb7.messages[0x0];
-      if (!_0x377e4f.message) {
+    const _0xc5b266 = _0x5c02b8.key.id;
+    _0x3dfd8e.ev.on("messages.upsert", async _0x3276da => {
+      const _0x220196 = _0x3276da.messages[0x0];
+      if (!_0x220196.message) {
         return;
       }
-      const _0x55a6bf = _0x377e4f.message.conversation || _0x377e4f.message.extendedTextMessage?.['text'];
-      const _0x36d641 = _0x377e4f.message.extendedTextMessage && _0x377e4f.message.extendedTextMessage.contextInfo.stanzaId === _0x7e6837;
-      if (_0x36d641) {
-        const _0x5cdff7 = parseInt(_0x55a6bf.trim());
-        if (!isNaN(_0x5cdff7) && _0x5cdff7 > 0x0 && _0x5cdff7 <= _0x8d5c1.length) {
-          const _0x52d441 = _0x8d5c1[_0x5cdff7 - 0x1];
-          const _0x128dad = 'https://api-site-2.vercel.app/api/sinhalasub/movie?url=' + encodeURIComponent(_0x52d441.link);
+      const _0x3f6bef = _0x220196.message.conversation || _0x220196.message.extendedTextMessage?.['text'];
+      const _0xfacf40 = _0x220196.message.extendedTextMessage && _0x220196.message.extendedTextMessage.contextInfo.stanzaId === _0xc5b266;
+      if (_0xfacf40) {
+        const _0x5975fb = parseInt(_0x3f6bef.trim());
+        if (!isNaN(_0x5975fb) && _0x5975fb > 0x0 && _0x5975fb <= _0x66d8c6.length) {
+          const _0x51bcf2 = _0x66d8c6[_0x5975fb - 0x1];
+          const _0x3c116b = "https://api-site-2.vercel.app/api/sinhalasub/movie?url=" + encodeURIComponent(_0x51bcf2.link);
           try {
-            const _0x34711e = await axios.get(_0x128dad);
-            const _0x2a3f0b = _0x34711e.data.result;
-            const _0x445770 = _0x2a3f0b.dl_links || [];
-            if (_0x445770.length === 0x0) {
-              return await _0x26d7d6("No PixelDrain links found.");
+            const _0x306fd2 = await axios.get(_0x3c116b);
+            const _0x4bd79a = _0x306fd2.data.result;
+            const _0x446048 = _0x4bd79a.dl_links || [];
+            if (_0x446048.length === 0x0) {
+              return await _0x20f27b("No PixelDrain links found.");
             }
-            let _0x12b4eb = "🎥 *" + _0x2a3f0b.title + "*\n\n";
-            _0x12b4eb += "*Available PixelDrain Download Links:*\n";
-            _0x445770.forEach((_0x225381, _0x3ab260) => {
-              _0x12b4eb += '*' + (_0x3ab260 + 0x1) + ".* " + _0x225381.quality + " - " + _0x225381.size + "\n🔗 Link: " + _0x225381.link + "\n\n";
+            let _0x3dc978 = "🎥 *" + _0x4bd79a.title + "*\n\n";
+            _0x3dc978 += "*Available PixelDrain Download Links:*\n";
+            _0x446048.forEach((_0x359c3a, _0x5298f6) => {
+              _0x3dc978 += '*' + (_0x5298f6 + 0x1) + ".* " + _0x359c3a.quality + " - " + _0x359c3a.size + "\n🔗 Link: " + _0x359c3a.link + "\n\n";
             });
-            const _0x3fa690 = await _0x2bc69a.sendMessage(_0x2958ae, {
-              'text': _0x12b4eb
+            const _0xf30520 = await _0x3dfd8e.sendMessage(_0x4a183a, {
+              'text': _0x3dc978
             }, {
-              'quoted': _0x377e4f
+              'quoted': _0x220196
             });
-            const _0x1bed6e = _0x3fa690.key.id;
-            _0x2bc69a.ev.on("messages.upsert", async _0x361530 => {
-              const _0x328f48 = _0x361530.messages[0x0];
-              if (!_0x328f48.message) {
+            const _0xe5d24f = _0xf30520.key.id;
+            _0x3dfd8e.ev.on('messages.upsert', async _0xbe427f => {
+              const _0x5e6a04 = _0xbe427f.messages[0x0];
+              if (!_0x5e6a04.message) {
                 return;
               }
-              const _0x425161 = _0x328f48.message.conversation || _0x328f48.message.extendedTextMessage?.["text"];
-              const _0x157370 = _0x328f48.message.extendedTextMessage && _0x328f48.message.extendedTextMessage.contextInfo.stanzaId === _0x1bed6e;
-              if (_0x157370) {
-                const _0x591037 = parseInt(_0x425161.trim());
-                if (!isNaN(_0x591037) && _0x591037 > 0x0 && _0x591037 <= _0x445770.length) {
-                  const _0x386b23 = _0x445770[_0x591037 - 0x1];
-                  const _0x54184a = _0x386b23.link.split('/').pop();
-                  await _0x2bc69a.sendMessage(_0x2958ae, {
+              const _0x3e46b6 = _0x5e6a04.message.conversation || _0x5e6a04.message.extendedTextMessage?.['text'];
+              const _0x14cafc = _0x5e6a04.message.extendedTextMessage && _0x5e6a04.message.extendedTextMessage.contextInfo.stanzaId === _0xe5d24f;
+              if (_0x14cafc) {
+                const _0x315031 = parseInt(_0x3e46b6.trim());
+                if (!isNaN(_0x315031) && _0x315031 > 0x0 && _0x315031 <= _0x446048.length) {
+                  const _0x2677a1 = _0x446048[_0x315031 - 0x1];
+                  const _0x58dd91 = _0x2677a1.link.split('/').pop();
+                  await _0x3dfd8e.sendMessage(_0x4a183a, {
                     'react': {
                       'text': '⬇️',
-                      'key': _0x39354f.key
+                      'key': _0xe26d99.key
                     }
                   });
-                  const _0x2807b1 = "https://pixeldrain.com/api/file/" + _0x54184a;
-                  await _0x2bc69a.sendMessage(_0x2958ae, {
+                  const _0x27bb65 = "https://pixeldrain.com/api/file/" + _0x58dd91;
+                  await _0x3dfd8e.sendMessage(_0x4a183a, {
                     'react': {
                       'text': '⬆',
-                      'key': _0x39354f.key
+                      'key': _0xe26d99.key
                     }
                   });
-                  await _0x2bc69a.sendMessage(_0x2958ae, {
+                  await _0x3dfd8e.sendMessage(_0x4a183a, {
                     'document': {
-                      'url': _0x2807b1
+                      'url': _0x27bb65
                     },
                     'mimetype': "video/mp4",
-                    'fileName': _0x2a3f0b.title + " - " + _0x386b23.quality + ".mp4",
-                    'caption': _0x2a3f0b.title + "\nQuality: " + _0x386b23.quality + "\nPowered by SinhalaSub",
+                    'fileName': _0x4bd79a.title + " - " + _0x2677a1.quality + '.mp4',
+                    'caption': _0x4bd79a.title + "\nQuality: " + _0x2677a1.quality + "\nPowered by SinhalaSub",
                     'contextInfo': {
                       'mentionedJid': [],
                       'externalAdReply': {
-                        'title': _0x2a3f0b.title,
-                        'body': "Download powered by ɢᴍᴀx-ai",
+                        'title': _0x4bd79a.title,
+                        'body': "ᴍᴀᴅᴇ ʙʏ sᴜʙᴢᴇʀᴏ",
                         'mediaType': 0x1,
-                        'sourceUrl': _0x52d441.link,
-                        'thumbnailUrl': _0x2a3f0b.image
+                        'sourceUrl': _0x51bcf2.link,
+                        'thumbnailUrl': _0x4bd79a.image
                       }
                     }
                   }, {
-                    'quoted': _0x328f48
+                    'quoted': _0x5e6a04
                   });
-                  await _0x2bc69a.sendMessage(_0x2958ae, {
+                  await _0x3dfd8e.sendMessage(_0x4a183a, {
                     'react': {
                       'text': '✅',
-                      'key': _0x39354f.key
+                      'key': _0xe26d99.key
                     }
                   });
                 } else {
-                  await _0x26d7d6("Invalid selection. Please reply with a valid number.");
+                  await _0x20f27b("Invalid selection. Please reply with a valid number.");
                 }
               }
             });
-          } catch (_0x292fe9) {
-            console.error("Error fetching movie details:", _0x292fe9);
-            await _0x26d7d6("An error occurred while fetching movie details. Please try again.");
+          } catch (_0x3bf620) {
+            console.error("Error fetching movie details:", _0x3bf620);
+            await _0x20f27b("An error occurred while fetching movie details. Please try again.");
           }
         } else {
-          await _0x26d7d6("Invalid selection. Please reply with a valid number.");
+          await _0x20f27b("Invalid selection. Please reply with a valid number.");
         }
       }
     });
-  } catch (_0x574d62) {
-    console.error("Error during search:", _0x574d62);
-    _0x26d7d6("*An error occurred while searching!*");
+  } catch (_0x14553d) {
+    console.error("Error during search:", _0x14553d);
+    _0x20f27b("*An error occurred while searching!*");
   }
 });
 cmd({
-  'pattern': "gdrive",
+  'pattern': 'gdrive',
   'desc': "To download Gdrive files.",
   'react': '🌐',
   'category': "download",
   'filename': __filename
-}, async (_0xf5ca65, _0x53ce51, _0x370aa1, {
-  from: _0x501ba1,
-  quoted: _0x2ca093,
-  body: _0x3b6eeb,
-  isCmd: _0x44dd81,
-  command: _0x20522f,
-  args: _0x57f194,
-  q: _0x69e7d4,
-  isGroup: _0x3e4f07,
-  sender: _0x5b1cac,
-  senderNumber: _0x2c1228,
-  botNumber2: _0x480195,
-  botNumber: _0x28f79b,
-  pushname: _0x18c8fd,
-  isMe: _0x29be84,
-  isOwner: _0x3b1ee8,
-  groupMetadata: _0x42a2bf,
-  groupName: _0x267f9c,
-  participants: _0x3ebac4,
-  groupAdmins: _0x1568d9,
-  isBotAdmins: _0x33b3a4,
-  isAdmins: _0x214893,
-  reply: _0x4beeec
+}, async (_0x58a7b9, _0x5afcc4, _0x5e2655, {
+  from: _0x5b710a,
+  quoted: _0x23793c,
+  body: _0x3586c0,
+  isCmd: _0x1f2c01,
+  command: _0x30818b,
+  args: _0x1df778,
+  q: _0x1ff06b,
+  isGroup: _0x885c21,
+  sender: _0x3fc8ee,
+  senderNumber: _0x2ef068,
+  botNumber2: _0x57d22a,
+  botNumber: _0x15ad9b,
+  pushname: _0x345ee7,
+  isMe: _0x31cf21,
+  isOwner: _0xfa9a0f,
+  groupMetadata: _0x5ac9c0,
+  groupName: _0x3c0484,
+  participants: _0x34e37a,
+  groupAdmins: _0x1f87c7,
+  isBotAdmins: _0x1de475,
+  isAdmins: _0x393542,
+  reply: _0x2f4ebd
 }) => {
   try {
-    await _0xf5ca65.sendMessage(_0x501ba1, {
+    await _0x58a7b9.sendMessage(_0x5b710a, {
       'react': {
         'text': '⬇️',
-        'key': _0x53ce51.key
+        'key': _0x5afcc4.key
       }
     });
-    if (!_0x69e7d4) {
-      return _0x370aa1.reply("Please Give Me a vaild Link...");
+    if (!_0x1ff06b) {
+      return _0x5e2655.reply("Please Give Me a vaild Link...");
     }
-    const _0x207ec9 = "https://api.fgmods.xyz/api/downloader/gdrive?url=" + _0x69e7d4 + "&apikey=mnp3grlZ";
-    const _0x2c3cdc = await axios.get(_0x207ec9);
-    const _0x24cd9f = _0x2c3cdc.data.result.downloadUrl;
-    if (_0x24cd9f) {
-      await _0xf5ca65.sendMessage(_0x501ba1, {
+    const _0x59e841 = "https://api.fgmods.xyz/api/downloader/gdrive?url=" + _0x1ff06b + '&apikey=mnp3grlZ';
+    const _0x5736f7 = await axios.get(_0x59e841);
+    const _0x43e539 = _0x5736f7.data.result.downloadUrl;
+    if (_0x43e539) {
+      await _0x58a7b9.sendMessage(_0x5b710a, {
         'react': {
           'text': '⬆️',
-          'key': _0x53ce51.key
+          'key': _0x5afcc4.key
         }
       });
-      await _0xf5ca65.sendMessage(_0x501ba1, {
+      await _0x58a7b9.sendMessage(_0x5b710a, {
         'document': {
-          'url': _0x24cd9f
+          'url': _0x43e539
         },
-        'mimetype': _0x2c3cdc.data.result.mimetype,
-        'fileName': _0x2c3cdc.data.result.fileName,
-        'caption': "*© Pᴏᴡᴇʀᴇᴅ Bʏ ɢᴍᴀx"
+        'mimetype': _0x5736f7.data.result.mimetype,
+        'fileName': _0x5736f7.data.result.fileName,
+        'caption': "*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ɢᴍᴀx*\n\n> Ｇｍａｘ ✻"
       }, {
-        'quoted': _0x53ce51
+        'quoted': _0x5afcc4
       });
     }
-    await _0xf5ca65.sendMessage(_0x501ba1, {
+    await _0x58a7b9.sendMessage(_0x5b710a, {
       'react': {
         'text': '✅',
-        'key': _0x53ce51.key
+        'key': _0x5afcc4.key
       }
     });
-  } catch (_0xa7c467) {
-    console.log(_0xa7c467);
+  } catch (_0x460920) {
+    console.log(_0x460920);
   }
 });
